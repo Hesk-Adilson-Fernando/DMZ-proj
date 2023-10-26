@@ -1,0 +1,36 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using DMZ.Model.Generic;
+
+namespace DMZ.Model.Model
+{
+    public class Percll
+    {
+        [Key]
+        public string Percllstamp { get; set; }
+        public string Perclstamp { get; set; }
+        public string Pccstamp { get; set; }
+        public DateTime Data { get; set; }
+        public string Nrdoc { get; set; }
+        public string Descricao { get; set; }
+        [DecimalPrecision(16, 2,true)]
+        public decimal Valorpreg { get; set; }
+        [DecimalPrecision(16, 2,true)]
+        public decimal Valordoc { get; set; }
+        [DecimalPrecision(16, 2,true)]
+        public decimal Valorreg { get; set; }
+        [DecimalPrecision(16, 2,true)]
+        public decimal ValorPend { get; set; }
+        [DecimalPrecision(16, 2,true)]
+        public decimal MvalorPend { get; set; }
+        public bool Anulado { get; set; }
+        public string Numinterno { get; set; }
+        public string Origem { get; set; }
+        [DecimalPrecision(16, 2,true)]
+        public decimal Mvalorpreg { get; set; }
+        [DecimalPrecision(16, 2,true)]
+        public decimal Mvalorreg { get; set; }
+        public bool Rcladiant { get; set; }//Recibo de adiantamento
+        public virtual Percl Percl { get; set; }
+    }
+}

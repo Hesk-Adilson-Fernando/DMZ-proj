@@ -1,0 +1,851 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="a_param">
+          <Key>
+            <PropertyRef Name="a_paramstamp" />
+          </Key>
+          <Property Name="a_paramstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="ftmax" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="rfmax" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="despmax" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="dumax" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="rdcodtesoura" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="rdcontatesoura" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="rdalttesoura" Type="bit" Nullable="false" />
+          <Property Name="rccodtesoura" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="rccontatesoura" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="rcalttesoura" Type="bit" Nullable="false" />
+          <Property Name="rpcodtesoura" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="rpcontatesoura" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="rpalttesoura" Type="bit" Nullable="false" />
+          <Property Name="pgcodtesoura" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="pgcontatesoura" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="pgalttesoura" Type="bit" Nullable="false" />
+          <Property Name="ftaberto" Type="bit" Nullable="false" />
+          <Property Name="separador" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ponto" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="AVMAX" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ivcodentr" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="ivdescentr" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="ivcodsai" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="ivdescsai" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="dseparador" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="UsaPosRest" Type="bit" Nullable="false" />
+          <Property Name="UsaPosQtt" Type="bit" Nullable="false" />
+          <Property Name="MaskPosQtt" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="MaskPosValor" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="motivoiva" Type="char" MaxLength="200" Nullable="false" />
+          <Property Name="cpextcccl" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="cpextccfn" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="cprd" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="cprdf" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="cplitsdocs" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="cpmvtcc" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="motivoivaeng" Type="char" MaxLength="200" Nullable="false" />
+          <Property Name="usadi" Type="bit" Nullable="false" />
+          <Property Name="usafact" Type="bit" Nullable="false" />
+          <Property Name="usafacc" Type="bit" Nullable="false" />
+          <Property Name="smtpserver" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="smtpport" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="outgoingemail" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="outgoingpassword" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="destinationemail" Type="text" Nullable="false" />
+          <Property Name="subj" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="emailtext" Type="text" Nullable="false" />
+          <Property Name="tipobase" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="formapag" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="codtiposgs" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="desctiposgs" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="codsgs" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descsgs" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="SMTPServerp" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="SMTPPortp" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="outGoingEmailp" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="outGoingPasswordp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="destinationEmailp" Type="text" Nullable="false" />
+          <Property Name="subjp" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="emailTextp" Type="text" Nullable="false" />
+          <Property Name="pathponto" Type="text" Nullable="false" />
+          <Property Name="usaanexo" Type="bit" Nullable="false" />
+          <Property Name="temailgest" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="temailpess" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="contacc" Type="numeric" Precision="16" Scale="0" Nullable="false" />
+          <Property Name="fncpgc" Type="numeric" Precision="16" Scale="0" Nullable="false" />
+          <Property Name="clpgc" Type="numeric" Precision="16" Scale="0" Nullable="false" />
+          <Property Name="grupo" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="marca" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="submarca" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="nopend" Type="bit" Nullable="false" />
+          <Property Name="codtzpos" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="contastesourapos" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="comissao" Type="numeric" Precision="4" Scale="2" Nullable="false" />
+          <Property Name="qttsoma" Type="bit" Nullable="false" />
+          <Property Name="gointro" Type="bit" Nullable="false" />
+          <Property Name="noaltpreco" Type="bit" Nullable="false" />
+          <Property Name="askremline" Type="bit" Nullable="false" />
+          <Property Name="refauto" Type="bit" Nullable="false" />
+          <Property Name="exprefauto" Type="text" Nullable="false" />
+          <Property Name="extuser" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="extpassw" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="extdatabase" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="extinstance" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="ShowCapBarras" Type="bit" Nullable="false" />
+          <Property Name="bdimagens" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="percSeguro" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="percFrete" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="valormin" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="valormin2" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="tabhonor" Type="bit" Nullable="false" />
+          <Property Name="naoresumo" Type="bit" Nullable="false" />
+          <Property Name="ivaagencia" Type="bit" Nullable="false" />
+          <Property Name="PastaScan" Type="text" Nullable="false" />
+          <Property Name="tipoimg" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="usaexternalbd" Type="bit" Nullable="false" />
+          <Property Name="usaestab" Type="bit" Nullable="false" />
+          <Property Name="usacomerc" Type="bit" Nullable="false" />
+          <Property Name="ano" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="autointcl" Type="bit" Nullable="false" />
+          <Property Name="diarioTrf" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="noDiTrf" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="nDocContTrf" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descDocTrf" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="diarioDp" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="noDiDp" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="nDocContDp" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descDocDp" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="diarioMvt" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="noDiMvt" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="nDocContMvt" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descDocMvt" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="autointfnc" Type="bit" Nullable="false" />
+          <Property Name="usames" Type="bit" Nullable="false" />
+          <Property Name="contmascara" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="autointeg" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="apparam">
+          <Key>
+            <PropertyRef Name="apparamstamp" />
+          </Key>
+          <Property Name="apparamstamp" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="conta" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="cc1" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="cc2" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="cc3" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="qmc" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="ivarec" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="ivaant" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="ivapag" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="origem" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="cmesant" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="desmesant" Type="varchar" MaxLength="60" />
+          <Property Name="sequec" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dc">
+          <Key>
+            <PropertyRef Name="dcstamp" />
+          </Key>
+          <Property Name="dcstamp" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="docno" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="docnome" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="abrv" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="pedeval" Type="bit" Nullable="false" />
+          <Property Name="arredonda" Type="bit" Nullable="false" />
+          <Property Name="olcodigo" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="nvaimapa" Type="bit" Nullable="false" />
+          <Property Name="oldesc" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="lancaol" Type="bit" Nullable="false" />
+          <Property Name="naolancapla" Type="bit" Nullable="false" />
+          <Property Name="oltrfa" Type="bit" Nullable="false" />
+          <Property Name="introol" Type="bit" Nullable="false" />
+          <Property Name="ollinhas" Type="bit" Nullable="false" />
+          <Property Name="automl" Type="bit" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="apuraiva" Type="bit" Nullable="false" />
+          <Property Name="apurares" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dcli">
+          <Key>
+            <PropertyRef Name="dclistamp" />
+          </Key>
+          <Property Name="dclistamp" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="dcstamp" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="conta" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="rubrica" Type="varchar" MaxLength="160" />
+          <Property Name="deb" Type="bit" Nullable="false" />
+          <Property Name="valor" Type="numeric" Precision="18" Scale="5" Nullable="false" />
+          <Property Name="factor" Type="numeric" Precision="13" Scale="8" Nullable="false" />
+          <Property Name="evalor" Type="numeric" Precision="19" Scale="6" Nullable="false" />
+          <Property Name="lordem" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="lbanco" Type="bit" Nullable="false" />
+          <Property Name="cct" Type="varchar" MaxLength="160" />
+          <Property Name="ncusto" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="oldesc" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="docno" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="sgrupo" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="grupo" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="olcodigo" Type="varchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="diario">
+          <Key>
+            <PropertyRef Name="diariostamp" />
+          </Key>
+          <Property Name="diariostamp" Type="char" MaxLength="25" Nullable="false" />
+          <Property Name="dino" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="docno" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="docnome" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="dilno" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="deb" Type="numeric" Precision="18" Scale="5" Nullable="false" />
+          <Property Name="cre" Type="numeric" Precision="18" Scale="5" Nullable="false" />
+          <Property Name="conana" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="confin" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="conord" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="edeb" Type="numeric" Precision="19" Scale="6" Nullable="false" />
+          <Property Name="ecre" Type="numeric" Precision="19" Scale="6" Nullable="false" />
+          <Property Name="diano" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="defeito" Type="bit" Nullable="false" />
+          <Property Name="apura" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lcont">
+          <Key>
+            <PropertyRef Name="Lcontstamp" />
+          </Key>
+          <Property Name="Lcontstamp" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="dinome" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="dilno" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="docnome" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="adoc" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="mes" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="dia" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="dino" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="doctipo" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="debfin" Type="numeric" Precision="18" Scale="5" Nullable="false" />
+          <Property Name="crefin" Type="numeric" Precision="18" Scale="5" Nullable="false" />
+          <Property Name="edebfin" Type="numeric" Precision="19" Scale="6" Nullable="false" />
+          <Property Name="ecrefin" Type="numeric" Precision="19" Scale="6" Nullable="false" />
+          <Property Name="ano" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="qmc" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="docno" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="moeda" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="cambio" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="docabvr" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="obs" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dcli_dc">
+          <End Role="dc" Type="Self.dc" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="dcli" Type="Self.dcli" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dc">
+              <PropertyRef Name="dcstamp" />
+            </Principal>
+            <Dependent Role="dcli">
+              <PropertyRef Name="dcstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HBModelStoreContainer">
+          <EntitySet Name="a_param" EntityType="Self.a_param" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="apparam" EntityType="Self.apparam" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dc" EntityType="Self.dc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dcli" EntityType="Self.dcli" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="diario" EntityType="Self.diario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lcont" EntityType="Self.Lcont" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dcli_dc" Association="Self.FK_dcli_dc">
+            <End Role="dc" EntitySet="dc" />
+            <End Role="dcli" EntitySet="dcli" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="a_param">
+          <Key>
+            <PropertyRef Name="a_paramstamp" />
+          </Key>
+          <Property Name="a_paramstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ftmax" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="rfmax" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="despmax" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="dumax" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="rdcodtesoura" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="rdcontatesoura" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="rdalttesoura" Type="Boolean" Nullable="false" />
+          <Property Name="rccodtesoura" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="rccontatesoura" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="rcalttesoura" Type="Boolean" Nullable="false" />
+          <Property Name="rpcodtesoura" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="rpcontatesoura" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="rpalttesoura" Type="Boolean" Nullable="false" />
+          <Property Name="pgcodtesoura" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="pgcontatesoura" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="pgalttesoura" Type="Boolean" Nullable="false" />
+          <Property Name="ftaberto" Type="Boolean" Nullable="false" />
+          <Property Name="separador" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ponto" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="AVMAX" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ivcodentr" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="ivdescentr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ivcodsai" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="ivdescsai" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="dseparador" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="UsaPosRest" Type="Boolean" Nullable="false" />
+          <Property Name="UsaPosQtt" Type="Boolean" Nullable="false" />
+          <Property Name="MaskPosQtt" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaskPosValor" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="motivoiva" Type="String" MaxLength="200" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="cpextcccl" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="cpextccfn" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="cprd" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="cprdf" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="cplitsdocs" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="cpmvtcc" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="motivoivaeng" Type="String" MaxLength="200" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="usadi" Type="Boolean" Nullable="false" />
+          <Property Name="usafact" Type="Boolean" Nullable="false" />
+          <Property Name="usafacc" Type="Boolean" Nullable="false" />
+          <Property Name="smtpserver" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="smtpport" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="outgoingemail" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="outgoingpassword" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="destinationemail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="subj" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="emailtext" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tipobase" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="formapag" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codtiposgs" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="desctiposgs" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codsgs" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descsgs" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="SMTPServerp" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="SMTPPortp" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="outGoingEmailp" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="outGoingPasswordp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="destinationEmailp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="subjp" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="emailTextp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pathponto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usaanexo" Type="Boolean" Nullable="false" />
+          <Property Name="temailgest" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="temailpess" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="contacc" Type="Decimal" Precision="16" Scale="0" Nullable="false" />
+          <Property Name="fncpgc" Type="Decimal" Precision="16" Scale="0" Nullable="false" />
+          <Property Name="clpgc" Type="Decimal" Precision="16" Scale="0" Nullable="false" />
+          <Property Name="grupo" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="submarca" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="nopend" Type="Boolean" Nullable="false" />
+          <Property Name="codtzpos" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="contastesourapos" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="comissao" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+          <Property Name="qttsoma" Type="Boolean" Nullable="false" />
+          <Property Name="gointro" Type="Boolean" Nullable="false" />
+          <Property Name="noaltpreco" Type="Boolean" Nullable="false" />
+          <Property Name="askremline" Type="Boolean" Nullable="false" />
+          <Property Name="refauto" Type="Boolean" Nullable="false" />
+          <Property Name="exprefauto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="extuser" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="extpassw" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="extdatabase" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="extinstance" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ShowCapBarras" Type="Boolean" Nullable="false" />
+          <Property Name="bdimagens" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="percSeguro" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="percFrete" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="valormin" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="valormin2" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="tabhonor" Type="Boolean" Nullable="false" />
+          <Property Name="naoresumo" Type="Boolean" Nullable="false" />
+          <Property Name="ivaagencia" Type="Boolean" Nullable="false" />
+          <Property Name="PastaScan" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tipoimg" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="usaexternalbd" Type="Boolean" Nullable="false" />
+          <Property Name="usaestab" Type="Boolean" Nullable="false" />
+          <Property Name="usacomerc" Type="Boolean" Nullable="false" />
+          <Property Name="ano" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="autointcl" Type="Boolean" Nullable="false" />
+          <Property Name="diarioTrf" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="noDiTrf" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="nDocContTrf" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descDocTrf" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="diarioDp" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="noDiDp" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="nDocContDp" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descDocDp" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="diarioMvt" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="noDiMvt" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="nDocContMvt" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descDocMvt" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="autointfnc" Type="Boolean" Nullable="false" />
+          <Property Name="usames" Type="Boolean" Nullable="false" />
+          <Property Name="contmascara" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="autointeg" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="apparam">
+          <Key>
+            <PropertyRef Name="apparamstamp" />
+          </Key>
+          <Property Name="apparamstamp" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="conta" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cc1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cc2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cc3" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qmc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ivarec" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ivaant" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ivapag" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="origem" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cmesant" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="desmesant" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="sequec" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="a_param" EntityType="Self.a_param" />
+          <EntitySet Name="apparam" EntityType="Self.apparam" />
+          <EntitySet Name="diario" EntityType="HBModel.diario" />
+          <EntitySet Name="dc" EntityType="HBModel.dc" />
+          <EntitySet Name="dcli" EntityType="HBModel.dcli" />
+          <EntitySet Name="Lcont" EntityType="HBModel.Lcont" />
+          <AssociationSet Name="FK_dcli_dc" Association="HBModel.FK_dcli_dc">
+            <End Role="dc" EntitySet="dc" />
+            <End Role="dcli" EntitySet="dcli" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="diario">
+          <Key>
+            <PropertyRef Name="diariostamp" />
+          </Key>
+          <Property Name="diariostamp" Type="String" Nullable="false" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="dino" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="docno" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="docnome" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="dilno" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="deb" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+          <Property Name="cre" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+          <Property Name="conana" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="confin" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="conord" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="edeb" Type="Decimal" Nullable="false" Precision="19" Scale="6" />
+          <Property Name="ecre" Type="Decimal" Nullable="false" Precision="19" Scale="6" />
+          <Property Name="diano" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="defeito" Type="Boolean" Nullable="false" />
+          <Property Name="apura" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dc">
+          <Key>
+            <PropertyRef Name="dcstamp" />
+          </Key>
+          <Property Name="dcstamp" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="docno" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="docnome" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="abrv" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="pedeval" Type="Boolean" Nullable="false" />
+          <Property Name="arredonda" Type="Boolean" Nullable="false" />
+          <Property Name="olcodigo" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="nvaimapa" Type="Boolean" Nullable="false" />
+          <Property Name="oldesc" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="lancaol" Type="Boolean" Nullable="false" />
+          <Property Name="naolancapla" Type="Boolean" Nullable="false" />
+          <Property Name="oltrfa" Type="Boolean" Nullable="false" />
+          <Property Name="introol" Type="Boolean" Nullable="false" />
+          <Property Name="ollinhas" Type="Boolean" Nullable="false" />
+          <Property Name="automl" Type="Boolean" Nullable="false" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="apuraiva" Type="Boolean" Nullable="false" />
+          <Property Name="apurares" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="dcli" Relationship="HBModel.FK_dcli_dc" FromRole="dc" ToRole="dcli" />
+        </EntityType>
+        <EntityType Name="dcli">
+          <Key>
+            <PropertyRef Name="dclistamp" />
+          </Key>
+          <Property Name="dclistamp" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="dcstamp" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="conta" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="rubrica" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+          <Property Name="deb" Type="Boolean" Nullable="false" />
+          <Property Name="valor" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+          <Property Name="factor" Type="Decimal" Nullable="false" Precision="13" Scale="8" />
+          <Property Name="evalor" Type="Decimal" Nullable="false" Precision="19" Scale="6" />
+          <Property Name="lordem" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="lbanco" Type="Boolean" Nullable="false" />
+          <Property Name="cct" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+          <Property Name="ncusto" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="oldesc" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="docno" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="sgrupo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="grupo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="olcodigo" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="dc" Relationship="HBModel.FK_dcli_dc" FromRole="dcli" ToRole="dc" />
+        </EntityType>
+        <EntityType Name="Lcont">
+          <Key>
+            <PropertyRef Name="Lcontstamp" />
+          </Key>
+          <Property Name="Lcontstamp" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="dinome" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="dilno" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="docnome" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="adoc" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="mes" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="dia" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="dino" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="doctipo" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="debfin" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+          <Property Name="crefin" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+          <Property Name="edebfin" Type="Decimal" Nullable="false" Precision="19" Scale="6" />
+          <Property Name="ecrefin" Type="Decimal" Nullable="false" Precision="19" Scale="6" />
+          <Property Name="ano" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="docno" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="moeda" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="cambio" Type="Decimal" Nullable="false" Precision="16" Scale="2" />
+          <Property Name="docabvr" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="obs" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_dcli_dc">
+          <End Type="HBModel.dc" Role="dc" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="HBModel.dcli" Role="dcli" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dc">
+              <PropertyRef Name="dcstamp" />
+            </Principal>
+            <Dependent Role="dcli">
+              <PropertyRef Name="dcstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HBModelStoreContainer" CdmEntityContainer="HBEntities">
+          <EntitySetMapping Name="a_param">
+            <EntityTypeMapping TypeName="HBModel.a_param">
+              <MappingFragment StoreEntitySet="a_param">
+                <ScalarProperty Name="a_paramstamp" ColumnName="a_paramstamp" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="ftmax" ColumnName="ftmax" />
+                <ScalarProperty Name="rfmax" ColumnName="rfmax" />
+                <ScalarProperty Name="despmax" ColumnName="despmax" />
+                <ScalarProperty Name="dumax" ColumnName="dumax" />
+                <ScalarProperty Name="rdcodtesoura" ColumnName="rdcodtesoura" />
+                <ScalarProperty Name="rdcontatesoura" ColumnName="rdcontatesoura" />
+                <ScalarProperty Name="rdalttesoura" ColumnName="rdalttesoura" />
+                <ScalarProperty Name="rccodtesoura" ColumnName="rccodtesoura" />
+                <ScalarProperty Name="rccontatesoura" ColumnName="rccontatesoura" />
+                <ScalarProperty Name="rcalttesoura" ColumnName="rcalttesoura" />
+                <ScalarProperty Name="rpcodtesoura" ColumnName="rpcodtesoura" />
+                <ScalarProperty Name="rpcontatesoura" ColumnName="rpcontatesoura" />
+                <ScalarProperty Name="rpalttesoura" ColumnName="rpalttesoura" />
+                <ScalarProperty Name="pgcodtesoura" ColumnName="pgcodtesoura" />
+                <ScalarProperty Name="pgcontatesoura" ColumnName="pgcontatesoura" />
+                <ScalarProperty Name="pgalttesoura" ColumnName="pgalttesoura" />
+                <ScalarProperty Name="ftaberto" ColumnName="ftaberto" />
+                <ScalarProperty Name="separador" ColumnName="separador" />
+                <ScalarProperty Name="ponto" ColumnName="ponto" />
+                <ScalarProperty Name="AVMAX" ColumnName="AVMAX" />
+                <ScalarProperty Name="ivcodentr" ColumnName="ivcodentr" />
+                <ScalarProperty Name="ivdescentr" ColumnName="ivdescentr" />
+                <ScalarProperty Name="ivcodsai" ColumnName="ivcodsai" />
+                <ScalarProperty Name="ivdescsai" ColumnName="ivdescsai" />
+                <ScalarProperty Name="dseparador" ColumnName="dseparador" />
+                <ScalarProperty Name="UsaPosRest" ColumnName="UsaPosRest" />
+                <ScalarProperty Name="UsaPosQtt" ColumnName="UsaPosQtt" />
+                <ScalarProperty Name="MaskPosQtt" ColumnName="MaskPosQtt" />
+                <ScalarProperty Name="MaskPosValor" ColumnName="MaskPosValor" />
+                <ScalarProperty Name="motivoiva" ColumnName="motivoiva" />
+                <ScalarProperty Name="cpextcccl" ColumnName="cpextcccl" />
+                <ScalarProperty Name="cpextccfn" ColumnName="cpextccfn" />
+                <ScalarProperty Name="cprd" ColumnName="cprd" />
+                <ScalarProperty Name="cprdf" ColumnName="cprdf" />
+                <ScalarProperty Name="cplitsdocs" ColumnName="cplitsdocs" />
+                <ScalarProperty Name="cpmvtcc" ColumnName="cpmvtcc" />
+                <ScalarProperty Name="motivoivaeng" ColumnName="motivoivaeng" />
+                <ScalarProperty Name="usadi" ColumnName="usadi" />
+                <ScalarProperty Name="usafact" ColumnName="usafact" />
+                <ScalarProperty Name="usafacc" ColumnName="usafacc" />
+                <ScalarProperty Name="smtpserver" ColumnName="smtpserver" />
+                <ScalarProperty Name="smtpport" ColumnName="smtpport" />
+                <ScalarProperty Name="outgoingemail" ColumnName="outgoingemail" />
+                <ScalarProperty Name="outgoingpassword" ColumnName="outgoingpassword" />
+                <ScalarProperty Name="destinationemail" ColumnName="destinationemail" />
+                <ScalarProperty Name="subj" ColumnName="subj" />
+                <ScalarProperty Name="emailtext" ColumnName="emailtext" />
+                <ScalarProperty Name="tipobase" ColumnName="tipobase" />
+                <ScalarProperty Name="formapag" ColumnName="formapag" />
+                <ScalarProperty Name="codtiposgs" ColumnName="codtiposgs" />
+                <ScalarProperty Name="desctiposgs" ColumnName="desctiposgs" />
+                <ScalarProperty Name="codsgs" ColumnName="codsgs" />
+                <ScalarProperty Name="descsgs" ColumnName="descsgs" />
+                <ScalarProperty Name="SMTPServerp" ColumnName="SMTPServerp" />
+                <ScalarProperty Name="SMTPPortp" ColumnName="SMTPPortp" />
+                <ScalarProperty Name="outGoingEmailp" ColumnName="outGoingEmailp" />
+                <ScalarProperty Name="outGoingPasswordp" ColumnName="outGoingPasswordp" />
+                <ScalarProperty Name="destinationEmailp" ColumnName="destinationEmailp" />
+                <ScalarProperty Name="subjp" ColumnName="subjp" />
+                <ScalarProperty Name="emailTextp" ColumnName="emailTextp" />
+                <ScalarProperty Name="pathponto" ColumnName="pathponto" />
+                <ScalarProperty Name="usaanexo" ColumnName="usaanexo" />
+                <ScalarProperty Name="temailgest" ColumnName="temailgest" />
+                <ScalarProperty Name="temailpess" ColumnName="temailpess" />
+                <ScalarProperty Name="contacc" ColumnName="contacc" />
+                <ScalarProperty Name="fncpgc" ColumnName="fncpgc" />
+                <ScalarProperty Name="clpgc" ColumnName="clpgc" />
+                <ScalarProperty Name="grupo" ColumnName="grupo" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="submarca" ColumnName="submarca" />
+                <ScalarProperty Name="nopend" ColumnName="nopend" />
+                <ScalarProperty Name="codtzpos" ColumnName="codtzpos" />
+                <ScalarProperty Name="contastesourapos" ColumnName="contastesourapos" />
+                <ScalarProperty Name="comissao" ColumnName="comissao" />
+                <ScalarProperty Name="qttsoma" ColumnName="qttsoma" />
+                <ScalarProperty Name="gointro" ColumnName="gointro" />
+                <ScalarProperty Name="noaltpreco" ColumnName="noaltpreco" />
+                <ScalarProperty Name="askremline" ColumnName="askremline" />
+                <ScalarProperty Name="refauto" ColumnName="refauto" />
+                <ScalarProperty Name="exprefauto" ColumnName="exprefauto" />
+                <ScalarProperty Name="extuser" ColumnName="extuser" />
+                <ScalarProperty Name="extpassw" ColumnName="extpassw" />
+                <ScalarProperty Name="extdatabase" ColumnName="extdatabase" />
+                <ScalarProperty Name="extinstance" ColumnName="extinstance" />
+                <ScalarProperty Name="ShowCapBarras" ColumnName="ShowCapBarras" />
+                <ScalarProperty Name="bdimagens" ColumnName="bdimagens" />
+                <ScalarProperty Name="percSeguro" ColumnName="percSeguro" />
+                <ScalarProperty Name="percFrete" ColumnName="percFrete" />
+                <ScalarProperty Name="valormin" ColumnName="valormin" />
+                <ScalarProperty Name="valormin2" ColumnName="valormin2" />
+                <ScalarProperty Name="tabhonor" ColumnName="tabhonor" />
+                <ScalarProperty Name="naoresumo" ColumnName="naoresumo" />
+                <ScalarProperty Name="ivaagencia" ColumnName="ivaagencia" />
+                <ScalarProperty Name="PastaScan" ColumnName="PastaScan" />
+                <ScalarProperty Name="tipoimg" ColumnName="tipoimg" />
+                <ScalarProperty Name="usaexternalbd" ColumnName="usaexternalbd" />
+                <ScalarProperty Name="usaestab" ColumnName="usaestab" />
+                <ScalarProperty Name="usacomerc" ColumnName="usacomerc" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="autointcl" ColumnName="autointcl" />
+                <ScalarProperty Name="diarioTrf" ColumnName="diarioTrf" />
+                <ScalarProperty Name="noDiTrf" ColumnName="noDiTrf" />
+                <ScalarProperty Name="nDocContTrf" ColumnName="nDocContTrf" />
+                <ScalarProperty Name="descDocTrf" ColumnName="descDocTrf" />
+                <ScalarProperty Name="diarioDp" ColumnName="diarioDp" />
+                <ScalarProperty Name="noDiDp" ColumnName="noDiDp" />
+                <ScalarProperty Name="nDocContDp" ColumnName="nDocContDp" />
+                <ScalarProperty Name="descDocDp" ColumnName="descDocDp" />
+                <ScalarProperty Name="diarioMvt" ColumnName="diarioMvt" />
+                <ScalarProperty Name="noDiMvt" ColumnName="noDiMvt" />
+                <ScalarProperty Name="nDocContMvt" ColumnName="nDocContMvt" />
+                <ScalarProperty Name="descDocMvt" ColumnName="descDocMvt" />
+                <ScalarProperty Name="autointfnc" ColumnName="autointfnc" />
+                <ScalarProperty Name="usames" ColumnName="usames" />
+                <ScalarProperty Name="contmascara" ColumnName="contmascara" />
+                <ScalarProperty Name="autointeg" ColumnName="autointeg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="apparam">
+            <EntityTypeMapping TypeName="HBModel.apparam">
+              <MappingFragment StoreEntitySet="apparam">
+                <ScalarProperty Name="apparamstamp" ColumnName="apparamstamp" />
+                <ScalarProperty Name="conta" ColumnName="conta" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="cc1" ColumnName="cc1" />
+                <ScalarProperty Name="cc2" ColumnName="cc2" />
+                <ScalarProperty Name="cc3" ColumnName="cc3" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="ivarec" ColumnName="ivarec" />
+                <ScalarProperty Name="ivaant" ColumnName="ivaant" />
+                <ScalarProperty Name="ivapag" ColumnName="ivapag" />
+                <ScalarProperty Name="origem" ColumnName="origem" />
+                <ScalarProperty Name="cmesant" ColumnName="cmesant" />
+                <ScalarProperty Name="desmesant" ColumnName="desmesant" />
+                <ScalarProperty Name="sequec" ColumnName="sequec" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="diario">
+            <EntityTypeMapping TypeName="HBModel.diario">
+              <MappingFragment StoreEntitySet="diario">
+                <ScalarProperty Name="apura" ColumnName="apura" />
+                <ScalarProperty Name="defeito" ColumnName="defeito" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="diano" ColumnName="diano" />
+                <ScalarProperty Name="ecre" ColumnName="ecre" />
+                <ScalarProperty Name="edeb" ColumnName="edeb" />
+                <ScalarProperty Name="conord" ColumnName="conord" />
+                <ScalarProperty Name="confin" ColumnName="confin" />
+                <ScalarProperty Name="conana" ColumnName="conana" />
+                <ScalarProperty Name="cre" ColumnName="cre" />
+                <ScalarProperty Name="deb" ColumnName="deb" />
+                <ScalarProperty Name="dilno" ColumnName="dilno" />
+                <ScalarProperty Name="docnome" ColumnName="docnome" />
+                <ScalarProperty Name="docno" ColumnName="docno" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="dino" ColumnName="dino" />
+                <ScalarProperty Name="diariostamp" ColumnName="diariostamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dc">
+            <EntityTypeMapping TypeName="HBModel.dc">
+              <MappingFragment StoreEntitySet="dc">
+                <ScalarProperty Name="apurares" ColumnName="apurares" />
+                <ScalarProperty Name="apuraiva" ColumnName="apuraiva" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="automl" ColumnName="automl" />
+                <ScalarProperty Name="ollinhas" ColumnName="ollinhas" />
+                <ScalarProperty Name="introol" ColumnName="introol" />
+                <ScalarProperty Name="oltrfa" ColumnName="oltrfa" />
+                <ScalarProperty Name="naolancapla" ColumnName="naolancapla" />
+                <ScalarProperty Name="lancaol" ColumnName="lancaol" />
+                <ScalarProperty Name="oldesc" ColumnName="oldesc" />
+                <ScalarProperty Name="nvaimapa" ColumnName="nvaimapa" />
+                <ScalarProperty Name="olcodigo" ColumnName="olcodigo" />
+                <ScalarProperty Name="arredonda" ColumnName="arredonda" />
+                <ScalarProperty Name="pedeval" ColumnName="pedeval" />
+                <ScalarProperty Name="abrv" ColumnName="abrv" />
+                <ScalarProperty Name="docnome" ColumnName="docnome" />
+                <ScalarProperty Name="docno" ColumnName="docno" />
+                <ScalarProperty Name="dcstamp" ColumnName="dcstamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dcli">
+            <EntityTypeMapping TypeName="HBModel.dcli">
+              <MappingFragment StoreEntitySet="dcli">
+                <ScalarProperty Name="olcodigo" ColumnName="olcodigo" />
+                <ScalarProperty Name="grupo" ColumnName="grupo" />
+                <ScalarProperty Name="sgrupo" ColumnName="sgrupo" />
+                <ScalarProperty Name="docno" ColumnName="docno" />
+                <ScalarProperty Name="oldesc" ColumnName="oldesc" />
+                <ScalarProperty Name="ncusto" ColumnName="ncusto" />
+                <ScalarProperty Name="cct" ColumnName="cct" />
+                <ScalarProperty Name="lbanco" ColumnName="lbanco" />
+                <ScalarProperty Name="lordem" ColumnName="lordem" />
+                <ScalarProperty Name="evalor" ColumnName="evalor" />
+                <ScalarProperty Name="factor" ColumnName="factor" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="deb" ColumnName="deb" />
+                <ScalarProperty Name="rubrica" ColumnName="rubrica" />
+                <ScalarProperty Name="conta" ColumnName="conta" />
+                <ScalarProperty Name="dcstamp" ColumnName="dcstamp" />
+                <ScalarProperty Name="dclistamp" ColumnName="dclistamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lcont">
+            <EntityTypeMapping TypeName="HBModel.Lcont">
+              <MappingFragment StoreEntitySet="Lcont">
+                <ScalarProperty Name="obs" ColumnName="obs" />
+                <ScalarProperty Name="docabvr" ColumnName="docabvr" />
+                <ScalarProperty Name="cambio" ColumnName="cambio" />
+                <ScalarProperty Name="moeda" ColumnName="moeda" />
+                <ScalarProperty Name="docno" ColumnName="docno" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="ecrefin" ColumnName="ecrefin" />
+                <ScalarProperty Name="edebfin" ColumnName="edebfin" />
+                <ScalarProperty Name="crefin" ColumnName="crefin" />
+                <ScalarProperty Name="debfin" ColumnName="debfin" />
+                <ScalarProperty Name="doctipo" ColumnName="doctipo" />
+                <ScalarProperty Name="dino" ColumnName="dino" />
+                <ScalarProperty Name="dia" ColumnName="dia" />
+                <ScalarProperty Name="mes" ColumnName="mes" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="adoc" ColumnName="adoc" />
+                <ScalarProperty Name="docnome" ColumnName="docnome" />
+                <ScalarProperty Name="dilno" ColumnName="dilno" />
+                <ScalarProperty Name="dinome" ColumnName="dinome" />
+                <ScalarProperty Name="Lcontstamp" ColumnName="Lcontstamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

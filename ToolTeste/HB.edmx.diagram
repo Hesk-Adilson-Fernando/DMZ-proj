@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="039552dedfaf405ca25b6d9d5bd26a98" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="HBModel.a_param" Width="1.5" PointX="6.125" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HBModel.apparam" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HBModel.diario" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="HBModel.dc" Width="1.5" PointX="8.375" PointY="1.125" />
+        <EntityTypeShape EntityType="HBModel.dcli" Width="1.5" PointX="10.625" PointY="1.5" />
+        <EntityTypeShape EntityType="HBModel.Lcont" Width="1.5" PointX="3.375" PointY="6.75" />
+        <AssociationConnector Association="HBModel.FK_dcli_dc" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

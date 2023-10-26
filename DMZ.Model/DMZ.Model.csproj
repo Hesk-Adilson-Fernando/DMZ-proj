@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC8B6638-D7F6-4997-8F51-F82D61FFA0F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMZ.Model</RootNamespace>
+    <AssemblyName>DMZ.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.8\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\Email.cs" />
+    <Compile Include="Attributes\Max.cs" />
+    <Compile Include="Attributes\MaxLength.cs" />
+    <Compile Include="Attributes\Min.cs" />
+    <Compile Include="Attributes\MinLength.cs" />
+    <Compile Include="Attributes\NotEmpty.cs" />
+    <Compile Include="Attributes\URL.cs" />
+    <Compile Include="Generic\DateConvention.cs" />
+    <Compile Include="Generic\DecimalConvention.cs" />
+    <Compile Include="Generic\DecimalPrecisionAttribute.cs" />
+    <Compile Include="Generic\UniqueAttribute.cs" />
+    <Compile Include="Model\Anolect.cs" />
+    <Compile Include="Model\AnoSem.cs" />
+    <Compile Include="Model\Aulino.cs" />
+    <Compile Include="Model\Aulinol.cs" />
+    <Compile Include="Model\Bico.cs" />
+    <Compile Include="Model\BombaBico.cs" />
+    <Compile Include="Model\Bomba.cs" />
+    <Compile Include="Model\calendario.cs" />
+    <Compile Include="Model\Ccudep.cs" />
+    <Compile Include="Model\ClCart.cs" />
+    <Compile Include="Model\ClLing.cs" />
+    <Compile Include="Model\Cursoacto.cs" />
+    <Compile Include="Model\Cursodoc.cs" />
+    <Compile Include="Model\Cursograd.cs" />
+    <Compile Include="Model\Dclasse.cs" />
+    <Compile Include="Model\Dclassel.cs" />
+    <Compile Include="Model\Dcv.cs" />
+    <Compile Include="Model\DiasFeria.cs" />
+    <Compile Include="Model\Discb.cs" />
+    <Compile Include="Model\DisciplinaTumra.cs" />
+    <Compile Include="Model\Docac.cs" />
+    <Compile Include="Model\Familiacar.cs" />
+    <Compile Include="Model\Familiacarl.cs" />
+    <Compile Include="Model\Familiapb.cs" />
+    <Compile Include="Model\Fing.cs" />
+    <Compile Include="Model\Grade.cs" />
+    <Compile Include="Model\Gradel.cs" />
+    <Compile Include="Model\Grupo.cs" />
+    <Compile Include="Model\Horario.cs" />
+    <Compile Include="Model\Horariol.cs" />
+    <Compile Include="Model\Maquina.cs" />
+    <Compile Include="Model\MatriculaAluno.cs" />
+    <Compile Include="Model\MatriculaTurmaAlunol.cs" />
+    <Compile Include="Model\PeSalbase.cs" />
+    <Compile Include="Model\Planoaval.cs" />
+    <Compile Include="Model\Planoavall.cs" />
+    <Compile Include="Model\Planobolsa.cs" />
+    <Compile Include="Model\Planomulta.cs" />
+    <Compile Include="Model\Planomultal.cs" />
+    <Compile Include="Model\Planopag.cs" />
+    <Compile Include="Model\Planopagp.cs" />
+    <Compile Include="Model\Pedisc.cs" />
+    <Compile Include="Model\PlanoFeria.cs" />
+    <Compile Include="Model\PlanoFerial.cs" />
+    <Compile Include="Model\Planopagt.cs" />
+    <Compile Include="Model\Processo.cs" />
+    <Compile Include="Model\Processol.cs" />
+    <Compile Include="Model\RltCond.cs" />
+    <Compile Include="Model\Sala.cs" />
+    <Compile Include="Model\Sem.cs" />
+    <Compile Include="Model\Stmaq.cs" />
+    <Compile Include="Model\Stpe.cs" />
+    <Compile Include="Model\StQuant.cs" />
+    <Compile Include="Model\SubGrupo.cs" />
+    <Compile Include="Model\TContrato.cs" />
+    <Compile Include="Model\Classes.cs" />
+    <Compile Include="Model\ClFilial.cs" />
+    <Compile Include="Model\Combustivel.cs" />
+    <Compile Include="Model\Ctauxiliarl.cs" />
+    <Compile Include="Model\Dlei.cs" />
+    <Compile Include="Model\Dleil.cs" />
+    <Compile Include="Model\FactConcet.cs" />
+    <Compile Include="Model\FncProc.cs" />
+    <Compile Include="Model\Imbauxiliar.cs" />
+    <Compile Include="Model\Imbauxiliarl.cs" />
+    <Compile Include="Model\Part.cs" />
+    <Compile Include="Model\Pefunc.cs" />
+    <Compile Include="Model\ProcAnalFnc.cs" />
+    <Compile Include="Model\ProcCrt.cs" />
+    <Compile Include="Model\Procurm.cs" />
+    <Compile Include="Model\Procurml.cs" />
+    <Compile Include="Model\Rltmapa.cs" />
+    <Compile Include="Model\St2.cs" />
+    <Compile Include="Model\Alauxiliar.cs" />
+    <Compile Include="Model\Alauxiliarl.cs" />
+    <Compile Include="Model\Alteracmes.cs" />
+    <Compile Include="Model\Anolectivo.cs" />
+    <Compile Include="Model\Apivded.cs" />
+    <Compile Include="Model\Apivliq.cs" />
+    <Compile Include="Model\Apparam.cs" />
+    <Compile Include="Model\TdocMat.cs" />
+    <Compile Include="Model\Tdocpe.cs" />
+    <Compile Include="Model\Tiporesult.cs" />
+    <Compile Include="Model\Turma.cs" />
+    <Compile Include="Model\Turmadisc.cs" />
+    <Compile Include="Model\Turmadiscp.cs" />
+    <Compile Include="Model\Turmal.cs" />
+    <Compile Include="Model\Turno.cs" />
+    <Compile Include="Model\Unimesa.cs" />
+    <Compile Include="Model\Unimesal.cs" />
+    <Compile Include="Model\UsrAudit.cs" />
+    <Compile Include="Model\Auxiliar2.cs" />
+    <Compile Include="Model\Caixal.cs" />
+    <Compile Include="Model\Ccutv.cs" />
+    <Compile Include="Model\Ccutvdoc.cs" />
+    <Compile Include="Model\Ccutvdocdi.cs" />
+    <Compile Include="Model\ClBolsa.cs" />
+    <Compile Include="Model\ClContact.cs" />
+    <Compile Include="Model\ClContas.cs" />
+    <Compile Include="Model\ClCt.cs" />
+    <Compile Include="Model\ClCursemdisc.cs" />
+    <Compile Include="Model\ClCur.cs" />
+    <Compile Include="Model\ClCursem.cs" />
+    <Compile Include="Model\ClDoc.cs" />
+    <Compile Include="Model\ClDoenca.cs" />
+    <Compile Include="Model\ClFam.cs" />
+    <Compile Include="Model\ClMorada.cs" />
+    <Compile Include="Model\Clst.cs" />
+    <Compile Include="Model\ClTur.cs" />
+    <Compile Include="Model\Codtz.cs" />
+    <Compile Include="Model\Condpag.cs" />
+    <Compile Include="Model\Condpagl.cs" />
+    <Compile Include="Model\Contasct.cs" />
+    <Compile Include="Model\Cpoc.cs" />
+    <Compile Include="Model\CpocCompra.cs" />
+    <Compile Include="Model\CpocVend.cs" />
+    <Compile Include="Model\Ctauxiliar.cs" />
+    <Compile Include="Model\Curso.cs" />
+    <Compile Include="Model\Desconto.cs" />
+    <Compile Include="Model\Ditec.cs" />
+    <Compile Include="Model\Factanexo.cs" />
+    <Compile Include="Model\Faccanexo.cs" />
+    <Compile Include="Model\Dianexo.cs" />
+    <Compile Include="Model\Diariodoc.cs" />
+    <Compile Include="Model\Dill.cs" />
+    <Compile Include="Model\Empresadep.cs" />
+    <Compile Include="Model\Factreg.cs" />
+    <Compile Include="Model\Factsegvia.cs" />
+    <Compile Include="Model\Falta.cs" />
+    <Compile Include="Model\FncBomb.cs" />
+    <Compile Include="Model\HoraExtra.cs" />
+    <Compile Include="Model\Inst.cs" />
+    <Compile Include="Model\Instunid.cs" />
+    <Compile Include="Model\Instunidl.cs" />
+    <Compile Include="Model\Turmanota.cs" />
+    <Compile Include="Model\Meses.cs" />
+    <Compile Include="Model\Motorista.cs" />
+    <Compile Include="Model\Motoristal.cs" />
+    <Compile Include="Model\Mov.cs" />
+    <Compile Include="Model\Numdocs.cs" />
+    <Compile Include="Model\Paramac.cs" />
+    <Compile Include="Model\Paramemail.cs" />
+    <Compile Include="Model\Parampv.cs" />
+    <Compile Include="Model\Pecc.cs" />
+    <Compile Include="Model\Peacidente.cs" />
+    <Compile Include="Model\Peaus.cs" />
+    <Compile Include="Model\PeAuxiliar.cs" />
+    <Compile Include="Model\Pect.cs" />
+    <Compile Include="Model\Peemp.cs" />
+    <Compile Include="Model\Peempcc.cs" />
+    <Compile Include="Model\Peempl.cs" />
+    <Compile Include="Model\PeForm.cs" />
+    <Compile Include="Model\Pericur.cs" />
+    <Compile Include="Model\Pericursem.cs" />
+    <Compile Include="Model\Pericursemtur.cs" />
+    <Compile Include="Model\Discl.cs" />
+    <Compile Include="Model\EmpresaMod.cs" />
+    <Compile Include="Model\Feriado.cs" />
+    <Compile Include="Model\Feriadol.cs" />
+    <Compile Include="Model\FncContact.cs" />
+    <Compile Include="Model\FncCt.cs" />
+    <Compile Include="Model\IV.cs" />
+    <Compile Include="Model\IVL.cs" />
+    <Compile Include="Model\Laranja.cs" />
+    <Compile Include="Model\Mat.cs" />
+    <Compile Include="Model\Matdisc.cs" />
+    <Compile Include="Model\Mescont.cs" />
+    <Compile Include="Model\Paramgct.cs" />
+    <Compile Include="Model\ParamImp.cs" />
+    <Compile Include="Model\Pe.cs" />
+    <Compile Include="Model\Peaux.cs" />
+    <Compile Include="Model\Pecont.cs" />
+    <Compile Include="Model\Pecontra.cs" />
+    <Compile Include="Model\A_Param.cs" />
+    <Compile Include="Model\Caixa.cs" />
+    <Compile Include="Model\Dc.cs" />
+    <Compile Include="Model\Dcli.cs" />
+    <Compile Include="Model\Diario.cs" />
+    <Compile Include="Model\Pebanc.cs" />
+    <Compile Include="Model\Pedesc.cs" />
+    <Compile Include="Model\Pedoc.cs" />
+    <Compile Include="Model\Pefalta.cs" />
+    <Compile Include="Model\Pefam.cs" />
+    <Compile Include="Model\Pefer.cs" />
+    <Compile Include="Model\Pehextra.cs" />
+    <Compile Include="Model\Peling.cs" />
+    <Compile Include="Model\Peri.cs" />
+    <Compile Include="Model\Pesind.cs" />
+    <Compile Include="Model\Pesub.cs" />
+    <Compile Include="Model\Petur.cs" />
+    <Compile Include="Model\Pgcsa.cs" />
+    <Compile Include="Model\PjAudit.cs" />
+    <Compile Include="Model\Pjclpe.cs" />
+    <Compile Include="Model\Pjdepart.cs" />
+    <Compile Include="Model\Pjdoc.cs" />
+    <Compile Include="Model\Pjesc.cs" />
+    <Compile Include="Model\Pjescl.cs" />
+    <Compile Include="Model\Pjpe.cs" />
+    <Compile Include="Model\PjRh.cs" />
+    <Compile Include="Model\Pjvt.cs" />
+    <Compile Include="Model\Prc.cs" />
+    <Compile Include="Model\Percll.cs" />
+    <Compile Include="Model\Proces.cs" />
+    <Compile Include="Model\profiss.cs" />
+    <Compile Include="Model\Pv.cs" />
+    <Compile Include="Model\RDLCXML.cs" />
+    <Compile Include="Model\Percl.cs" />
+    <Compile Include="Model\Reserva.cs" />
+    <Compile Include="Model\Reserval.cs" />
+    <Compile Include="Model\RltCc.cs" />
+    <Compile Include="Model\Rltsql.cs" />
+    <Compile Include="Model\Sector.cs" />
+    <Compile Include="Model\Mesas.cs" />
+    <Compile Include="Model\Rltusr.cs" />
+    <Compile Include="Model\SectMesas.cs" />
+    <Compile Include="Model\StCt.cs" />
+    <Compile Include="Model\StDrp.cs" />
+    <Compile Include="Model\StDrpc.cs" />
+    <Compile Include="Model\StFnc.cs" />
+    <Compile Include="Model\Stimpar.cs" />
+    <Compile Include="Model\Streaval.cs" />
+    <Compile Include="Model\Streval.cs" />
+    <Compile Include="Model\StVtdoc.cs" />
+    <Compile Include="Model\StVtman.cs" />
+    <Compile Include="Model\Sub.cs" />
+    <Compile Include="Model\TabelaAmort.cs" />
+    <Compile Include="Model\Tirps.cs" />
+    <Compile Include="Model\Tirpsl.cs" />
+    <Compile Include="Model\TPercl.cs" />
+    <Compile Include="Model\Tpgp.cs" />
+    <Compile Include="Model\Transp.cs" />
+    <Compile Include="Model\Transpvt.cs" />
+    <Compile Include="Model\Usracessos.cs" />
+    <Compile Include="Model\Armazem.cs" />
+    <Compile Include="Model\Auxiliar.cs" />
+    <Compile Include="Model\Banco.cs" />
+    <Compile Include="Model\Cambio.cs" />
+    <Compile Include="Model\Cc.cs" />
+    <Compile Include="Model\CCu.cs" />
+    <Compile Include="Model\Ccu_Arm.cs" />
+    <Compile Include="Model\Ccu_Caixa.cs" />
+    <Compile Include="Model\Ent.cs" />
+    <Compile Include="Model\Factprest.cs" />
+    <Compile Include="Model\Codcc.cs" />
+    <Compile Include="Model\Codstk.cs" />
+    <Compile Include="Model\Contas.cs" />
+    <Compile Include="Model\Di.cs" />
+    <Compile Include="Model\Dil.cs" />
+    <Compile Include="Model\Dist.cs" />
+    <Compile Include="Model\Docmodulo.cs" />
+    <Compile Include="Model\Empresa.cs" />
+    <Compile Include="Model\Facc.cs" />
+    <Compile Include="Model\Faccl.cs" />
+    <Compile Include="Model\Faccprest.cs" />
+    <Compile Include="Model\Fact.cs" />
+    <Compile Include="Model\Factl.cs" />
+    <Compile Include="Model\Familia.cs" />
+    <Compile Include="Model\Fnc.cs" />
+    <Compile Include="Model\Fcc.cs" />
+    <Compile Include="Model\Formasp.cs" />
+    <Compile Include="Model\Fpagam.cs" />
+    <Compile Include="Model\LCont.cs" />
+    <Compile Include="Model\Ml.cs" />
+    <Compile Include="Model\Modulos.cs" />
+    <Compile Include="Model\Moedas.cs" />
+    <Compile Include="Model\Mstk.cs" />
+    <Compile Include="Model\MVT.cs" />
+    <Compile Include="Model\Pad.cs" />
+    <Compile Include="Model\Paises.cs" />
+    <Compile Include="Model\Cl.cs" />
+    <Compile Include="Model\Param.cs" />
+    <Compile Include="Model\Pgc.cs" />
+    <Compile Include="Model\Pgf.cs" />
+    <Compile Include="Model\Pgfl.cs" />
+    <Compile Include="Model\RCL.cs" />
+    <Compile Include="Model\RCLL.cs" />
+    <Compile Include="Model\Rlt.cs" />
+    <Compile Include="Model\Starm.cs" />
+    <Compile Include="Model\Stcp.cs" />
+    <Compile Include="Model\StPrecos.cs" />
+    <Compile Include="Model\St.cs" />
+    <Compile Include="Model\Prov.cs" />
+    <Compile Include="Model\Status.cs" />
+    <Compile Include="Model\SubFam.cs" />
+    <Compile Include="Model\Tdi.cs" />
+    <Compile Include="Model\Tdoc.cs" />
+    <Compile Include="Model\Tdocf.cs" />
+    <Compile Include="Model\Tpgf.cs" />
+    <Compile Include="Model\TRcl.cs" />
+    <Compile Include="Model\Trd.cs" />
+    <Compile Include="Model\Trdf.cs" />
+    <Compile Include="Model\Usr.cs" />
+    <Compile Include="Model\Usrcontas.cs" />
+    <Compile Include="Model\UsrLog.cs" />
+    <Compile Include="Model\UsrlogSect.cs" />
+    <Compile Include="Model\UsrModulo.cs" />
+    <Compile Include="Model\Usrmudapreco.cs" />
+    <Compile Include="Model\Vend.cs" />
+    <Compile Include="Model\StVtTrailer.cs" />
+    <Compile Include="Model\Vtmanunt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Pj.cs" />
+    <Compile Include="Model\TdocPJ.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,156 @@
+﻿namespace DMZ.DAL.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class updCasasdecimais : DbMigration
+    {
+        public override void Up()
+        {
+            AlterColumn("dbo.Fact", "Subtotal", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Perdesc", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Desconto", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Descontofin", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Totaliva", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Total", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Msubtotal", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Mdesconto", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Mtotaliva", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Mtotal", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Fact", "Cambiousd", c => c.Decimal(nullable: false, precision: 10, scale: 3));
+            AlterColumn("dbo.Factl", "Quant", c => c.Decimal(nullable: false, precision: 16, scale: 4));
+            AlterColumn("dbo.Factl", "Preco", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Mpreco", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Valival", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Mvalival", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Descontol", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Mdescontol", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Subtotall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Msubtotall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Totall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Mtotall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Factl", "Quant2", c => c.Decimal(nullable: false, precision: 16, scale: 4));
+            AlterColumn("dbo.Factl", "Cambiousd", c => c.Decimal(nullable: false, precision: 10, scale: 4));
+            AlterColumn("dbo.Dil", "Preco", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Dil", "Mpreco", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Dil", "Valival", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Dil", "Mvalival", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Dil", "Mdescontol", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Dil", "Subtotall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Dil", "Msubtotall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Dil", "Totall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Dil", "Mtotall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Dil", "Cambiousd", c => c.Decimal(nullable: false, precision: 10, scale: 3));
+            AlterColumn("dbo.Dil", "Quant2", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Di", "Subtotal", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Di", "Perdesc", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Di", "Desconto", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Di", "Totaliva", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Di", "Total", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Di", "Msubtotal", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Di", "Mdesconto", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Di", "Mtotaliva", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Di", "Mtotal", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Subtotal", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Perdesc", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Totaliva", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Total", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Msubtotal", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Mdesconto", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Mtotaliva", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Mtotal", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Cambiousd", c => c.Decimal(nullable: false, precision: 10, scale: 3));
+            AlterColumn("dbo.Facc", "Descontofin", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "MDescontofin", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Facc", "Perdescfin", c => c.Decimal(nullable: false, precision: 8, scale: 3));
+            AlterColumn("dbo.Faccl", "Quant", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Preco", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Mpreco", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Valival", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Mvalival", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Descontol", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Mdescontol", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Subtotall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Msubtotall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Totall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Mtotall", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Qttmedida", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Totalmedida", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+            AlterColumn("dbo.Faccl", "Quant2", c => c.Decimal(nullable: false, precision: 18, scale: 4));
+        }
+        
+        public override void Down()
+        {
+            AlterColumn("dbo.Faccl", "Quant2", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Totalmedida", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Qttmedida", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Mtotall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Totall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Msubtotall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Subtotall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Mdescontol", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Descontol", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Mvalival", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Valival", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Mpreco", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Preco", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Faccl", "Quant", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Perdescfin", c => c.Decimal(nullable: false, precision: 5, scale: 2));
+            AlterColumn("dbo.Facc", "MDescontofin", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Descontofin", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Cambiousd", c => c.Decimal(nullable: false, precision: 8, scale: 2));
+            AlterColumn("dbo.Facc", "Mtotal", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Mtotaliva", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Mdesconto", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Msubtotal", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Total", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Totaliva", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Perdesc", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Facc", "Subtotal", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Di", "Mtotal", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Di", "Mtotaliva", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Di", "Mdesconto", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Di", "Msubtotal", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Di", "Total", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Di", "Totaliva", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Di", "Desconto", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Di", "Perdesc", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Di", "Subtotal", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Quant2", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Cambiousd", c => c.Decimal(nullable: false, precision: 8, scale: 2));
+            AlterColumn("dbo.Dil", "Mtotall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Totall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Msubtotall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Subtotall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Mdescontol", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Mvalival", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Valival", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Mpreco", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Dil", "Preco", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Cambiousd", c => c.Decimal(nullable: false, precision: 8, scale: 2));
+            AlterColumn("dbo.Factl", "Quant2", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Mtotall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Totall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Msubtotall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Subtotall", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Mdescontol", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Descontol", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Mvalival", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Valival", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Mpreco", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Preco", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Factl", "Quant", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Cambiousd", c => c.Decimal(nullable: false, precision: 8, scale: 2));
+            AlterColumn("dbo.Fact", "Mtotal", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Mtotaliva", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Mdesconto", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Msubtotal", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Total", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Totaliva", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Descontofin", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Desconto", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Perdesc", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+            AlterColumn("dbo.Fact", "Subtotal", c => c.Decimal(nullable: false, precision: 16, scale: 2));
+        }
+    }
+}

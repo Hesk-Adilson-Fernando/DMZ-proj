@@ -1,0 +1,1930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DEEC276-C78A-42CF-9076-FC81D3700483}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DMZ.Batch</RootNamespace>
+    <AssemblyName>DMZ.Batch</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AccaoNaTela.cs" />
+    <Compile Include="Classes\AnoLectivo.cs" />
+    <Compile Include="Classes\CalenderMonth.cs" />
+    <Compile Include="Classes\ConnHelper.cs" />
+    <Compile Include="Classes\criptografia.cs" />
+    <Compile Include="Classes\DialogResult.cs" />
+    <Compile Include="Classes\DMZConverter.cs" />
+    <Compile Include="Classes\Ec.cs" />
+    <Compile Include="Classes\Email.cs" />
+    <Compile Include="Classes\EnviaEmail.cs" />
+    <Compile Include="Classes\GenDI.cs" />
+    <Compile Include="Classes\GridDecorator.cs" />
+    <Compile Include="Classes\Helper.cs" />
+    <Compile Include="Classes\HelperFact.cs" />
+    <Compile Include="Classes\Messagem.cs" />
+    <Compile Include="Classes\Operation.cs" />
+    <Compile Include="Classes\Parametros.cs" />
+    <Compile Include="Classes\ProgressReport.cs" />
+    <Compile Include="Classes\Security.cs" />
+    <Compile Include="Classes\SoftwareVersion.cs" />
+    <Compile Include="Classes\Tipocoluna.cs" />
+    <Compile Include="Classes\UsbCamera.cs" />
+    <Compile Include="Classes\VPN.cs" />
+    <Compile Include="Classes\WinAPI.cs" />
+    <Compile Include="DataProgressbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataProgressbar.Designer.cs">
+      <DependentUpon>DataProgressbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExtensionsHelper.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
+    <EmbeddedResource Include="DataProgressbar.resx">
+      <DependentUpon>DataProgressbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\3FR_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\About_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\About_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\account_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Account_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Accounting_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Accounting_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Accounting_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Active Directory_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Activity History_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Activo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add Administrator_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add Database_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add Key_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add List_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add List_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add Property_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add Property_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add Property_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add Row_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add Tag_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add User Male_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Add User Male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\add_dollar_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\add_list_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\addFactl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Addlinepx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Admin Settings Male_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Administrative Tools_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Administrator Male_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Administrator Male_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Administrator Male_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Administrator Male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\align_text_left_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Ambulance_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Analises.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\AnalisesT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\analyze_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\analyze_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\analyze_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Ankh_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\ApagarLinha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Approval_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Archive Folder_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Artificial Intelligence_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Attach_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\attendance_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Attention_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Automatic_251px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Automatic_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Automatic_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\automation_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\azure_relay_hybrid_connection_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\azure_relay_hybrid_connection_33px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Back_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\back_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Back_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bank Card Front Side_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bank Cards_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\bar_chart_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\bar_chart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Barcode Scanner 2_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Barcode Scanner_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Barcode Scanner_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\barn_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\beer_recipe_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bill_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\bill_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\bill_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\bonds_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Book Shelf_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\brochure_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Building_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bulleted List_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bulleted List_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bullish_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bullish_32_1px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bullish_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Businessman_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bust_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bust_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Bust_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Buy_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\buy_for_change_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Cadastro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\CadastroT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Caixa_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Calculator_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Calendar 12_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Calendar Plus_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Calendar_201px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Calendar_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Calendar_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\calendar_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Camper_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\cancel_201px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Cancel_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Cancel_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Cancel_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\cancel_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\cancel_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\capital_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\capital_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Car Service_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Card in Use_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Card in Use_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Cash Register_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Categorize_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\CCusto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Certificate_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\certification_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Check All_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Check_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Check_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\check_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\check_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Checked Checkbox 2_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Checked Checkbox_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Checked Truck_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Checked User Male_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Checked_20px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Checked_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Checked_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Checkmark_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\checkout_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Choir_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Circle_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Circled Dot_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Circled Left 2_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Circled Menu_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Circled Right 2_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\circled_menu_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Circuit_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Ckeckedoptiongroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\cl_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Clash Of Clans_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Classroom_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Classroom_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Client Management_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Client Management_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Clock_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Close Pane_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Close Pane_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Close Sign_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Close Sign_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Close Window_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Close Window_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Close Window_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Close_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Closed Window_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Coderwall_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Coins_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Collaboration_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Collapse Arrow_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Color Mode_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Combo Chart_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Combo Chart_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Combo Chart_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Combo Chart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\combo_chart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\coming_soon_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\communication_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Company_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Compare Git_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Compose_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Configuracao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\ConfiguracaoT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\connect_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Connect_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\connect_develop_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Connection Status On_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Contabilidade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Contacts_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Contas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Content_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\contract_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Control Panel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Cook Female_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Copy to Clipboard_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Copy to Clipboard_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Copy_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\copy_link_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\copy_to_clipboard_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\countdown_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\country_house_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Courses_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Courthouse_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Create New_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Create New_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Create New_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\create_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Create_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\create_order_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Crowd_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Crowdfunding_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Currency Exchange_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Currency Exchange_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Currency Exchange_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Currency Exchange_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Customer_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Customer_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Customer_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Customer_321px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Customer_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Cutlery_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\CV_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\cydia_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Dashboard_252px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Dashboard_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Dashboard_25Tpx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\dashboard_322px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Dashboard_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Data Backup_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Data Backup_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Data Configuration_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Data Grid_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Data Recovery_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Data Sheet_251px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Data Sheet_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Data Sheet_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\data_sheet_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Database Administrator_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Database Restore_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Database_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Database_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\database_administrator_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Date Man Woman_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Day View_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\day_view_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\decline_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Delete_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Delete_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Delete_2522px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Delete_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Delete_25XXpx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Delete_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\delete_folder_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\delete_ticket_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\DeleteFactl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\delivery_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Department_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Department_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Deployment_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Design_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Dictionary_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Diploma 2_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\doc_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\doc_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\DOC_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\document_255px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Document_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Documents Folder_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Documents Folder_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Documents_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Documents_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\documents_251px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\documents_252px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\documents_254px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Documents_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\documents_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Documents_321px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\documents_322px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\documents_folder_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Dog Leash_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Dollar Bitcoin Exchange_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Dollar Bitcoin Exchange_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Door Opened_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Door Opened_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\door_sensor_alarmed_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\dos_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\dos_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Dossier_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\DOT_251px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\DOT_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\DOT_96_1px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\DOT_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Double Left_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Double Right_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\double_left_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\double_left_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\double_right_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Download_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Downloading Updates_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Drafting Compass 2_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Driver_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Duplicar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\duplicate_231px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\duplicate_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\duplicate_27px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\ECG_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Edit Property_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Edit User Male_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\edit_column_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\edit_property_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\edit_property_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\email_send_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\email_send_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Encomenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\escrow_process_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Estimate_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Estimate_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Ethernet Settings_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Euro Money_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\euro_money_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Event Accepted_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\event_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Expand Arrow_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Expensive 2_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Export Pdf_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Export_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Exterior_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\External Link_251px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\External Link_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Eye_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Facturacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\FacturacaoT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Familia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\File Settings_251px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\File Settings_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Filter_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\FiltroIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\FindCliente_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Flow_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\fnc_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Forward_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Forward_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\forward_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Forward_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Fpagam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Fund Accounting_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gabinet_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\gantt_chart_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gas Pump_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gas Station_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gas Station_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gas Station_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gears_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gears_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gears_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gender_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Geography_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Geometry_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gestao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\GestaoT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Globe_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Globe_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\goal_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Goal_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Gold Bars_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Google Classroom_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Google Docs_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Google Web Search_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Google Web Search_23px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Google Web Search_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\google_forms_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\google_forms_new_logo_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\gpx_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Graduation Cap_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Graduation Cap_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Graph Report_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Graph_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\graph_322px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\graph_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\graph_report_script_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Grid_25listpx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\grid_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\grid_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Group Objects_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Group Objects_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Group Objects_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Group Objects_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\group_objects_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\group_of_companies_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Hamburger_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Hangar_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Hangar_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\hdd_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\heat_map_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Hide Sidepanel_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\home_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Home_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\homeadvisor_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Imobilidade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\import_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Import_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Inactivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Increase_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\increase_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Info Popup_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Ingredients_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Inquiry_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Instagram Old_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Installing Updates_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Internet_15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\invoice_251px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\invoice_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\invoice_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Jet Engine Transportation Cradle_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\job_321px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Job_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Key_15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Key_201px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Key_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Key_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Key_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Key_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\key_31px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Key_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Keyboard_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Keyboard_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Keyboard_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Lancar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Language_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Language_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\law_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Leadership_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Ledger_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Less Than_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Less Than_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Less Than_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Less Than_25px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Library_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Library_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Light Bulb_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Like It_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\List View_19px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\List View_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\List View_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Load Balancer_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\loading_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Loading_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\loading_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\lock_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\logo5.png" />
+    <Content Include="Img\User_25px.png" />
+    <None Include="Img\Yandex Money_20px.png" />
+    <None Include="Img\Workspace_22px.png" />
+    <None Include="Img\Workflow_30px.png" />
+    <None Include="Img\Word_15px.png" />
+    <None Include="Img\whatsapp_32px.png" />
+    <None Include="Img\Wedding Rings_22px.png" />
+    <None Include="Img\WebMoney_28px.png" />
+    <None Include="Img\webhook_21px.png" />
+    <None Include="Img\Web Design_25px.png" />
+    <None Include="Img\warning_shield_32px.png" />
+    <None Include="Img\Warehouse_30px.png" />
+    <None Include="Img\view_21px.png" />
+    <None Include="Img\View DetailsBlackpx.png" />
+    <None Include="Img\View Details_23px.png" />
+    <None Include="Img\Viatura.png" />
+    <None Include="Img\Versions_25px.png" />
+    <None Include="Img\vendedor.png" />
+    <None Include="Img\Vendaspx.png" />
+    <None Include="Img\Vegas_22px.png" />
+    <None Include="Img\Vegan Clothing_32px_1.png" />
+    <None Include="Img\user_account_21px.png" />
+    <None Include="Img\User_96px.png" />
+    <None Include="Img\User_32xx.png" />
+    <None Include="Img\User_32px_2.png" />
+    <None Include="Img\User_32px.png" />
+    <None Include="Img\user_321px.png" />
+    <None Include="Img\user_21px.png" />
+    <None Include="Img\User_20px.png" />
+    <None Include="Img\user_201px.png" />
+    <None Include="Img\User Male_100px.png" />
+    <None Include="Img\User Groups_32px.png" />
+    <None Include="Img\User Groups_25px.png" />
+    <None Include="Img\unfold_28px.png" />
+    <None Include="Img\Undo_25px.png" />
+    <None Include="Img\Undo_251px.png" />
+    <None Include="Img\UnCkeckedoptiongroup.png" />
+    <None Include="Img\unchecked_checkbox_22px.png" />
+    <None Include="Img\unchecked_checkbox_20px.png" />
+    <None Include="Img\Unchecked Checkbox_23px.png" />
+    <None Include="Img\TXT_21px.png" />
+    <None Include="Img\True False_21px.png" />
+    <None Include="Img\truck_32px.png" />
+    <None Include="Img\Truck_25px.png" />
+    <None Include="Img\Trolley_32px.png" />
+    <None Include="Img\Trolley_30px.png" />
+    <None Include="Img\Tree Structure_23px.png" />
+    <None Include="Img\Tree Structure_16px.png" />
+    <None Include="Img\Treatment Plan_32px.png" />
+    <None Include="Img\Trash_32px.png" />
+    <None Include="Img\Trash_25px_1.png" />
+    <None Include="Img\Trash_25px.png" />
+    <None Include="Img\Trash_25Black.png" />
+    <None Include="Img\Trash_252px.png" />
+    <None Include="Img\Trash_251px.png" />
+    <None Include="Img\Trash_21px.png" />
+    <None Include="Img\Trash_20px.png" />
+    <None Include="Img\Trash_201px.png" />
+    <None Include="Img\Trash_15px.png" />
+    <None Include="Img\Trash Can_20px.png" />
+    <None Include="Img\Transfer_25px.png" />
+    <None Include="Img\Transaction_28px.png" />
+    <None Include="Img\Transaction_25px.png" />
+    <None Include="Img\Transaction List_32px.png" />
+    <None Include="Img\Trailer_32px.png" />
+    <None Include="Img\trailer_321px.png" />
+    <None Include="Img\Track Order_32px.png" />
+    <None Include="Img\Token Card Code_21px.png" />
+    <None Include="Img\tips_20px.png" />
+    <None Include="Img\timetable_21px.png" />
+    <None Include="Img\tick_box_20px.png" />
+    <None Include="Img\Text Input Form_25px.png" />
+    <None Include="Img\testflight_30px.png" />
+    <None Include="Img\Test Results_25px.png" />
+    <None Include="Img\Telephone_15px.png" />
+    <None Include="Img\team_21px.png" />
+    <None Include="Img\task_32px.png" />
+    <None Include="Img\task_26px.png" />
+    <None Include="Img\Task_22px.png" />
+    <None Include="Img\Tags_28px.png" />
+    <None Include="Img\Tableware_22px.png" />
+    <None Include="Img\Table_28px.png" />
+    <None Include="Img\Table_25px.png" />
+    <None Include="Img\Table Properties_25px.png" />
+    <None Include="Img\Tabelas.png" />
+    <None Include="Img\system_information_21px.png" />
+    <None Include="Img\System Task_32px.png" />
+    <None Include="Img\Synchronize_28px.png" />
+    <None Include="Img\sync_settings_21px.png" />
+    <None Include="Img\Sync Settings_20px.png" />
+    <None Include="Img\swivel_25px.png" />
+    <None Include="Img\suv_32px.png" />
+    <None Include="Img\Surface_20px.png" />
+    <None Include="Img\support_25px.png" />
+    <None Include="Img\SuporteT.png" />
+    <None Include="Img\Suporte.png" />
+    <None Include="Img\Subway_21px.png" />
+    <None Include="Img\Subtract_23px.png" />
+    <None Include="Img\Subtract_233px.png" />
+    <None Include="Img\submit_resume_26px.png" />
+    <None Include="Img\Submit Progress_22px.png" />
+    <None Include="Img\Student Registration_30px.png" />
+    <None Include="Img\Student Male_32px.png" />
+    <None Include="Img\Student Male_28px.png" />
+    <None Include="Img\stream_35px.png" />
+    <None Include="Img\Stocks_32px.png" />
+    <None Include="Img\stocks_25px.png" />
+    <None Include="Img\states_21px.png" />
+    <None Include="Img\start_menu_21px.png" />
+    <None Include="Img\start_25px.png" />
+    <None Include="Img\staff_25px.png" />
+    <None Include="Img\Stack of Money_32px.png" />
+    <None Include="Img\Squared Menu_32px.png" />
+    <None Include="Img\Speed_32px.png" />
+    <None Include="Img\speed_30px.png" />
+    <None Include="Img\smart_home_key_20px.png" />
+    <None Include="Img\slice_30px.png" />
+    <None Include="Img\Singing Teacher_21px.png" />
+    <None Include="Img\Shutdown_28px.png" />
+    <None Include="Img\show_property_21px.png" />
+    <None Include="Img\Show Sidepanel_25px.png" />
+    <None Include="Img\Shopping Cart_96px.png" />
+    <None Include="Img\Shopping Cart_25px.png" />
+    <None Include="Img\Shopping Cart_20px.png" />
+    <None Include="Img\Shopping Cart Loaded_64px.png" />
+    <None Include="Img\Shopping Cart Loaded_32px.png" />
+    <None Include="Img\shop_32px.png" />
+    <None Include="Img\Settings_32px.png" />
+    <None Include="Img\settings_322px.png" />
+    <None Include="Img\settings_321px.png" />
+    <None Include="Img\settings_30px.png" />
+    <None Include="Img\Settings_25px.png" />
+    <None Include="Img\settings_253px.png" />
+    <None Include="Img\settings_252px.png" />
+    <None Include="Img\Settings_251px.png" />
+    <None Include="Img\settings_21px.png" />
+    <None Include="Img\Settings_20xxxxpx.png" />
+    <None Include="Img\Services_32px.png" />
+    <None Include="Img\Services_21px.png" />
+    <None Include="Img\Send Email_20px.png" />
+    <None Include="Img\Send Email_15px.png" />
+    <None Include="Img\sell_stock_32px.png" />
+    <None Include="Img\sell_stock_28px.png" />
+    <None Include="Img\sell_stock_25px.png" />
+    <None Include="Img\Sell Property_25px.png" />
+    <None Include="Img\select_yes_25px.png" />
+    <None Include="Img\select_column_26px.png" />
+    <None Include="Img\segundavia_28px.png" />
+    <None Include="Img\security_configuration_32px.png" />
+    <None Include="Img\security_configuration_20px.png" />
+    <None Include="Img\Search_30px.png" />
+    <None Include="Img\Search_25px.png" />
+    <None Include="Img\Search_20px.png" />
+    <None Include="Img\Search_19px.png" />
+    <None Include="Img\scorecard_21px.png" />
+    <None Include="Img\school_locker_28px.png" />
+    <None Include="Img\School_321px.png" />
+    <None Include="Img\School_25px.png" />
+    <None Include="Img\School_21px.png" />
+    <None Include="Img\School Director_32px.png" />
+    <None Include="Img\School Director_28px.png" />
+    <None Include="Img\schedule_32px.png" />
+    <None Include="Img\save_as_28px.png" />
+    <None Include="Img\Save_25xxxxpx.png" />
+    <None Include="Img\Save_25px.png" />
+    <None Include="Img\Save_25_Lightpx.png" />
+    <None Include="Img\Save as_25px_2.png" />
+    <None Include="Img\Save as_25px_1.png" />
+    <None Include="Img\Save as_25px.png" />
+    <None Include="Img\Save as_23px.png" />
+    <None Include="Img\Salary male_22px.png" />
+    <None Include="Img\Rules_32px.png" />
+    <None Include="Img\Rules_25px.png" />
+    <None Include="Img\rules_21px.png" />
+    <None Include="Img\Right_32px.png" />
+    <None Include="Img\Right_28px.png" />
+    <None Include="Img\Right_15px.png" />
+    <None Include="Img\Reviewer Male_45px.png" />
+    <None Include="Img\return_25px.png" />
+    <None Include="Img\Return Purchase_32px.png" />
+    <None Include="Img\Resume_25px.png" />
+    <None Include="Img\Restaurant Table_28px.png" />
+    <None Include="Img\Reserve_28px.png" />
+    <None Include="Img\Reserva.png" />
+    <None Include="Img\rescan_document_22px.png" />
+    <None Include="Img\Request Money_32px.png" />
+    <None Include="Img\Repository_22px.png" />
+    <None Include="Img\repository_21px.png" />
+    <None Include="Img\report_card_21px.png" />
+    <None Include="Img\report_card_211px.png" />
+    <None Include="Img\Report Card_28px.png" />
+    <None Include="Img\rental_house_contract_48px.png" />
+    <None Include="Img\rental_house_contract_32px.png" />
+    <None Include="Img\Registration_28px.png" />
+    <None Include="Img\Registered Trademark_20px.png" />
+    <None Include="Img\Registered Trademark_201px.png" />
+    <None Include="Img\Region Code_21px.png" />
+    <None Include="Img\Refresh_25px.png" />
+    <None Include="Img\refresh_21px.png" />
+    <None Include="Img\Refresh_20px.png" />
+    <None Include="Img\Refresh_202px.png" />
+    <None Include="Img\Refresh_18px.png" />
+    <None Include="Img\Refresh.png" />
+    <None Include="Img\red_file_25px.png" />
+    <None Include="Img\receipt_terminal_32px.png" />
+    <None Include="Img\receipt_and_change_32px.png" />
+    <None Include="Img\receipt_30px.png" />
+    <None Include="Img\Receipt_25px.png" />
+    <None Include="Img\Receipt and Change_25px.png" />
+    <None Include="Img\real_estate_32px.png" />
+    <None Include="Img\read_25px.png" />
+    <None Include="Img\read_21px.png" />
+    <None Include="Img\rcllist_28px.png" />
+    <None Include="Img\rcl_28px.png" />
+    <None Include="Img\ratings_21px.png" />
+    <None Include="Img\Railroad Car_21px.png" />
+    <None Include="Img\Railcar_25px.png" />
+    <None Include="Img\Question Shield_64px.png" />
+    <None Include="Img\QR Code_25px.png" />
+    <None Include="Img\public_transportation_30px.png" />
+    <None Include="Img\Projectos.png" />
+    <None Include="Img\project_management_32px.png" />
+    <None Include="Img\Project Setup_22px.png" />
+    <None Include="Img\Proforma Invoice_22px.png" />
+    <None Include="Img\Profiles_25px.png" />
+    <None Include="Img\Profile_25px.png" />
+    <None Include="Img\Produtos\pexels-curioso-photography-288100.jpg" />
+    <None Include="Img\Produtos\BREESER.png" />
+    <None Include="Img\Produtos\Bife de vaca.jpg" />
+    <None Include="Img\Produtos\Beer.png" />
+    <None Include="Img\Produtos\51416.jpg" />
+    <None Include="Img\Produtos\2MLata.png" />
+    <None Include="Img\Produtos\12324.png" />
+    <None Include="Img\Product_32px.png" />
+    <None Include="Img\product_322px.png" />
+    <None Include="Img\product_21px.png" />
+    <None Include="Img\Product Management_22px.png" />
+    <None Include="Img\Procurment.png" />
+    <None Include="Img\Procura_19px.png" />
+    <None Include="Img\Procura.png" />
+    <None Include="Img\process_manual_32px.png" />
+    <None Include="Img\process_automatico_32px.png" />
+    <None Include="Img\process_32px.png" />
+    <None Include="Img\process_321px.png" />
+    <None Include="Img\Process_25px.png" />
+    <None Include="Img\process_252px.png" />
+    <None Include="Img\Process_251px.png" />
+    <None Include="Img\Process_22px.png" />
+    <None Include="Img\Process_20px.png" />
+    <None Include="Img\Process Improvement_32px.png" />
+    <None Include="Img\Process Improvement_28px.png" />
+    <None Include="Img\printer_out_of_paper_22px.png" />
+    <None Include="Img\printer_out_of_paper_18px.png" />
+    <None Include="Img\printer_error_22px.png" />
+    <None Include="Img\printer_error_20px.png" />
+    <None Include="Img\Printer Maintenance_25px.png" />
+    <None Include="Img\Printer Door Open_25px.png" />
+    <None Include="Img\print_gradient_25px.png" />
+    <None Include="Img\Print_30px.png" />
+    <None Include="Img\Print_28px.png" />
+    <None Include="Img\print_281px.png" />
+    <None Include="Img\Print_25px.png" />
+    <None Include="Img\print_251px.png" />
+    <None Include="Img\Print_23px.png" />
+    <None Include="Img\Print_22px.png" />
+    <None Include="Img\Print_20px.png" />
+    <None Include="Img\Pricing Structure_21px.png" />
+    <None Include="Img\price_tag_32px.png" />
+    <None Include="Img\Previous_28px.png" />
+    <None Include="Img\Previous_25px.png" />
+    <None Include="Img\Preview Pane_25px.png" />
+    <None Include="Img\ppt_25px.png" />
+    <None Include="Img\poster_21px.png" />
+    <None Include="Img\Positive Dynamic_21px.png" />
+    <None Include="Img\POS Terminal_28px.png" />
+    <None Include="Img\POS Terminal_25px.png" />
+    <None Include="Img\POS Terminal_252px.png" />
+    <None Include="Img\POS Terminal_251px.png" />
+    <None Include="Img\Plus_32px.png" />
+    <None Include="Img\Plus_25px.png" />
+    <None Include="Img\Plus_25_1px.png" />
+    <None Include="Img\Plus_23px_1.png" />
+    <None Include="Img\Plus_22px.png" />
+    <None Include="Img\Plus_20px.png" />
+    <None Include="Img\Plus 1 Year_21px.png" />
+    <None Include="Img\Plesk_32px.png" />
+    <None Include="Img\Playlist_25px.png" />
+    <None Include="Img\play_25px.png" />
+    <None Include="Img\Planner_21px.png" />
+    <None Include="Img\Pineapple_32px.png" />
+    <None Include="Img\Picture_64px.png" />
+    <None Include="Img\picture_642px.png" />
+    <None Include="Img\Pickup_22px.png" />
+    <None Include="Img\Physics_22px.png" />
+    <None Include="Img\Phone_25px.png" />
+    <None Include="Img\pexels-rodolfo-clix-1036936.jpg" />
+    <None Include="Img\pexels-pixabay-192544.jpg" />
+    <None Include="Img\pexels-mareefe-1236662.jpg" />
+    <None Include="Img\pexels-lisa-1266302.jpg" />
+    <None Include="Img\pexels-johannes-plenio-2259232.jpg" />
+    <None Include="Img\pexels-evie-shaffer-3014451.jpg" />
+    <None Include="Img\pexels-dids-3530116.jpg" />
+    <None Include="Img\pexels-damon-hall-1647177.jpg" />
+    <None Include="Img\pexels-andre-moura-2414985.jpg" />
+    <None Include="Img\Petrol_25px.png" />
+    <None Include="Img\person_female_21px.png" />
+    <None Include="Img\person_32px.png" />
+    <None Include="Img\person_30px.png" />
+    <None Include="Img\Permanent Job_25px.png" />
+    <None Include="Img\People_32px.png" />
+    <None Include="Img\people_31px.png" />
+    <None Include="Img\People_23px.png" />
+    <None Include="Img\Pen_22px.png" />
+    <None Include="Img\Pen_15px.png" />
+    <None Include="Img\PDF_25px.png" />
+    <None Include="Img\pdf_22px.png" />
+    <None Include="Img\pdf_21px.png" />
+    <None Include="Img\Payroll_32px.png" />
+    <None Include="Img\Pay Wall_32px.png" />
+    <None Include="Img\pause_25px.png" />
+    <None Include="Img\paste_25px.png" />
+    <None Include="Img\Password Window_25px.png" />
+    <None Include="Img\parallel_workflow_30px.png" />
+    <None Include="Img\Paper Money_20px.png" />
+    <None Include="Img\Paint Bucket With QR_21px.png" />
+    <None Include="Img\paid_bill_32px.png" />
+    <None Include="Img\Origin_32px.png" />
+    <None Include="Img\Organization_25px.png" />
+    <None Include="Img\Order History_23px.png" />
+    <None Include="Img\Opened Folder_20px.png" />
+    <None Include="Img\open_box_21px.png" />
+    <None Include="Img\Open in Popup_25px.png" />
+    <None Include="Img\Open Door_28px.png" />
+    <None Include="Img\Open Door_281px.png" />
+    <None Include="Img\Open Door_25px.png" />
+    <None Include="Img\Online Payment _25px.png" />
+    <None Include="Img\Online Money Transfer_32px.png" />
+    <None Include="Img\Ok Hand_23px.png" />
+    <None Include="Img\Occupied Theatre Seat_25px.png" />
+    <None Include="Img\Novo_25px.png" />
+    <None Include="Img\Note_21px.png" />
+    <None Include="Img\node_32.png" />
+    <None Include="Img\node.ico" />
+    <None Include="Img\Next_28px.png" />
+    <None Include="Img\Next_25px.png" />
+    <None Include="Img\news_28px.png" />
+    <None Include="Img\new_copy_25px.png" />
+    <None Include="Img\Networking Manager_22px.png" />
+    <None Include="Img\Network_32px.png" />
+    <None Include="Img\Network_20px.png" />
+    <None Include="Img\NEF_30px.png" />
+    <None Include="Img\Name_23px.png" />
+    <None Include="Img\Name_20px.png" />
+    <None Include="Img\my_computer_32px.png" />
+    <None Include="Img\Museum_28px.png" />
+    <None Include="Img\Multiple Inputs_23px.png" />
+    <None Include="Img\multichannel_21px.png" />
+    <None Include="Img\Move by Trolley_28px.png" />
+    <None Include="Img\more_details_21px.png" />
+    <None Include="Img\More Than_25px.png" />
+    <None Include="Img\More Than_251px.png" />
+    <None Include="Img\More Than_100px.png" />
+    <None Include="Img\month_view_25px.png" />
+    <None Include="Img\month_view_21px.png" />
+    <None Include="Img\Monitor_25px.png" />
+    <None Include="Img\Monitor_22px.png" />
+    <None Include="Img\money_transfer_25px.png" />
+    <None Include="Img\money_circulation_25px.png" />
+    <None Include="Img\money_box_25px.png" />
+    <None Include="Img\money_bag_pokemon_21px.png" />
+    <None Include="Img\money_bag_321px.png" />
+    <None Include="Img\money_bag_26px.png" />
+    <None Include="Img\money_bag_21px.png" />
+    <None Include="Img\Money_32px.png" />
+    <None Include="Img\money_321px.png" />
+    <None Include="Img\money_25px.png" />
+    <None Include="Img\Money_21px.png" />
+    <None Include="Img\Money Circulation_22px.png" />
+    <None Include="Img\Money Circulation_20px.png" />
+    <None Include="Img\Money Bag_45px.png" />
+    <None Include="Img\Money Bag_32px.png" />
+    <None Include="Img\Money Bag_321px.png" />
+    <None Include="Img\Money Bag_28px.png" />
+    <None Include="Img\Money Bag_25px.png" />
+    <None Include="Img\Money Bag Franc_32px.png" />
+    <None Include="Img\Money Bag Euro_25px.png" />
+    <None Include="Img\Monastery_32px.png" />
+    <None Include="Img\Moleskine_22px.png" />
+    <None Include="Img\molecule_32px.png" />
+    <None Include="Img\moedas.png" />
+    <None Include="Img\Module_21px.png" />
+    <None Include="Img\Module_16.png" />
+    <None Include="Img\minus_32px.png" />
+    <None Include="Img\Minus_22px.png" />
+    <None Include="Img\Minus Math _20px.png" />
+    <None Include="Img\minimize_window_32px.png" />
+    <None Include="Img\Minimize Window_28px.png" />
+    <None Include="Img\Minimize Window_25px.png" />
+    <None Include="Img\Mind Map_32px_2.png" />
+    <None Include="Img\Mind Map_32px_1.png" />
+    <None Include="Img\microsoft_sharepoint_21px.png" />
+    <None Include="Img\Microsoft Word_25px.png" />
+    <None Include="Img\Microsoft Project_30px.png" />
+    <None Include="Img\Microsoft Excel_25px.png" />
+    <None Include="Img\Merge Files_21px.png" />
+    <None Include="Img\Merchant Account_30px.png" />
+    <None Include="Img\menu_25px.png" />
+    <None Include="Img\Menu_20px.png" />
+    <None Include="Img\Menu Vertical_32px.png" />
+    <None Include="Img\Menu Vertical_28px.png" />
+    <None Include="Img\Menu Vertical_25px.png" />
+    <None Include="Img\Menu Vertical_251px.png" />
+    <None Include="Img\Menu Squared_25px.png" />
+    <None Include="Img\Menu Squared_23px.png" />
+    <None Include="Img\Member_32px.png" />
+    <None Include="Img\Member_321px.png" />
+    <None Include="Img\Member_25px.png" />
+    <None Include="Img\member_21px.png" />
+    <None Include="Img\Maximize Window_25px.png" />
+    <None Include="Img\Mastercard Logo_25px.png" />
+    <None Include="Img\Manager_96px.png" />
+    <None Include="Img\Manager_32px.png" />
+    <None Include="Img\Management_32px.png" />
+    <None Include="Img\Male_25px.png" />
+    <None Include="Img\Male User_85px.png" />
+    <None Include="Img\Male User_20px.png" />
+    <None Include="Img\Maintenance_32px.png" />
+    <None Include="Img\Maintenance_321px.png" />
+    <None Include="Img\Maintenance_25px.png" />
+    <None Include="Img\maintenance_21px.png" />
+    <None Include="Img\magazine_21px.png" />
+    <None Include="Img\Logout Rounded Left_25px.png" />
+    <None Include="Img\Logout Rounded Left_23px.png" />
+    <None Include="Img\logopx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DMZ.BL\DMZ.BL.csproj">
+      <Project>{943fb43f-b61b-482c-a26a-d0000a4ff357}</Project>
+      <Name>DMZ.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMZ.DAL\DMZ.DAL.csproj">
+      <Project>{3b5518e7-6c05-4d37-8f94-dcf62802bc24}</Project>
+      <Name>DMZ.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMZ.Model\DMZ.Model.csproj">
+      <Project>{ec8b6638-d7f6-4997-8f51-f82d61ffa0f4}</Project>
+      <Name>DMZ.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

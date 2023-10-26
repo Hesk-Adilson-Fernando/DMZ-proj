@@ -1,0 +1,2055 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AcosterrasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="pedesc">
+          <Key>
+            <PropertyRef Name="pedescstamp" />
+          </Key>
+          <Property Name="pedescstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="pestamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="codigo" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="Valor" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="tipo" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="no" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="peemp">
+          <Key>
+            <PropertyRef Name="peempstamp" />
+          </Key>
+          <Property Name="codigo" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Valor" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="no" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="nome" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="mesin" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="numprest" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="devsal" Type="bit" Nullable="false" />
+          <Property Name="devolvido" Type="bit" Nullable="false" />
+          <Property Name="peempstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="pestamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="obs" Type="char" MaxLength="250" Nullable="false" />
+          <Property Name="codmes" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="saldo" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="ano" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="moeda" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="Banco" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="contatesoura" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="titulo" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="numtitulo" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="codtz" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="peempcc">
+          <Key>
+            <PropertyRef Name="peempccstamp" />
+          </Key>
+          <Property Name="codigo" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Valor" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="ano" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="nummes" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="mes" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="nrdoc" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="no" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="nome" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="vencim" Type="datetime" Nullable="false" />
+          <Property Name="debito" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="debitom" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+          <Property Name="debitof" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="debitofm" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+          <Property Name="credito" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="creditom" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+          <Property Name="creditof" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="creditofm" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+          <Property Name="peemplstamp" Type="char" MaxLength="30" />
+          <Property Name="peempccstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="prcstamp" Type="char" MaxLength="30" />
+          <Property Name="origem" Type="char" MaxLength="30" />
+          <Property Name="oristamp" Type="char" MaxLength="30" />
+          <Property Name="documento" Type="char" MaxLength="30" />
+          <Property Name="moeda" Type="char" MaxLength="30" />
+          <Property Name="ccusto" Type="char" MaxLength="30" />
+          <Property Name="codmov" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="empdevstamp" Type="char" MaxLength="30" />
+          <Property Name="prcempstamp" Type="char" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="peempl">
+          <Key>
+            <PropertyRef Name="peemplstamp" />
+          </Key>
+          <Property Name="codigo" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Valor" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="mespagar" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="ano" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="nummes" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="pago" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="ult_devol" Type="datetime" Nullable="false" />
+          <Property Name="saldo" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="devolvido" Type="bit" Nullable="false" />
+          <Property Name="peempstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="peemplstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="no" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="nome" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="nrdoc" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="moeda" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="Banco" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="contatesoura" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="titulo" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="numtitulo" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="codtz" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pesub">
+          <Key>
+            <PropertyRef Name="pesubstamp" />
+          </Key>
+          <Property Name="pesubstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="pestamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="codigo" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="Valor" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="tipo" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="no" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pjpe">
+          <Key>
+            <PropertyRef Name="pjpestamp" />
+          </Key>
+          <Property Name="No" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="Nome" Type="char" MaxLength="80" Nullable="false" />
+          <Property Name="funcao" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="pjpestamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="pjstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Acosterras.dbo.pjst' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="pjst">
+          <Key>
+            <PropertyRef Name="ref" />
+            <PropertyRef Name="descricao" />
+            <PropertyRef Name="Qtt" />
+            <PropertyRef Name="Qttok" />
+            <PropertyRef Name="QttFalta" />
+            <PropertyRef Name="Preco" />
+            <PropertyRef Name="Total" />
+            <PropertyRef Name="pjststamp" />
+            <PropertyRef Name="pjstamp" />
+            <PropertyRef Name="status" />
+          </Key>
+          <Property Name="ref" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="Qtt" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="Qttok" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="QttFalta" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="Preco" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="Total" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="pjststamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="pjstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Acosterras.dbo.pjvt' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="pjvt">
+          <Key>
+            <PropertyRef Name="matricula" />
+            <PropertyRef Name="Capacit" />
+            <PropertyRef Name="nviagens" />
+            <PropertyRef Name="Totqtt" />
+            <PropertyRef Name="nome" />
+            <PropertyRef Name="no" />
+            <PropertyRef Name="pjvtstamp" />
+            <PropertyRef Name="pjstamp" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="marca" />
+            <PropertyRef Name="tipo" />
+            <PropertyRef Name="valorbase" />
+          </Key>
+          <Property Name="matricula" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Capacit" Type="numeric" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="nviagens" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="Totqtt" Type="numeric" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="nome" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="no" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="pjvtstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="pjstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="marca" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="tipo" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="valorbase" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prc">
+          <Key>
+            <PropertyRef Name="Prcstamp" />
+          </Key>
+          <Property Name="Prcstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Processstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="nrmes" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="mes" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="ano" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="no" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="nome" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="codcat" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="cat" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="coddesc" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="codfun" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="codesc" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="escalao" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="indice" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="codsec" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="codcl" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="classe" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="quota" Type="bit" Nullable="false" />
+          <Property Name="sind" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="nsind" Type="numeric" Precision="14" Scale="0" Nullable="false" />
+          <Property Name="codsit" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="situacao" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="BaseCateg" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="totsub" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="totabonus" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="totdesc" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="liquido" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="obs" Type="text" Nullable="false" />
+          <Property Name="fechado" Type="bit" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="valoremp" Type="numeric" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="val_emp" Type="numeric" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="SegSocEmp" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prcdesc">
+          <Key>
+            <PropertyRef Name="Prcdescstamp" />
+          </Key>
+          <Property Name="codigo" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="taxa" Type="numeric" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Valor" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="Prcdescstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Prcstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="tipodesc" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="tipo" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="Fixo" Type="bit" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="taxa2" Type="numeric" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="valor2" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prcemp">
+          <Key>
+            <PropertyRef Name="Prcempstamp" />
+          </Key>
+          <Property Name="nrmes" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="mes" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="Valor" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="ano" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Prcempstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="peemplstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Prcstamp" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PRCEXTRA">
+          <Key>
+            <PropertyRef Name="PRCEXTRASTAMP" />
+          </Key>
+          <Property Name="PRCEXTRASTAMP" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="PROCESSSTAMP" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="NRMES" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="MES" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="ANO" Type="numeric" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="DATA" Type="datetime" Nullable="false" />
+          <Property Name="NO" Type="numeric" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="NOME" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="CODCAT" Type="numeric" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="CAT" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="CODDESC" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="CODFUN" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="CODESC" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="ESCALAO" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="INDICE" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="CODSEC" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="CODCL" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="CLASSE" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="QUOTA" Type="bit" Nullable="false" />
+          <Property Name="SIND" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="NSIND" Type="numeric" Precision="16" Scale="0" Nullable="false" />
+          <Property Name="CODSIT" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="SITUACAO" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="BASECATEG" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTSUB" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTABONUS" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTDESC" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="LIQUIDO" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="FECHADO" Type="bit" Nullable="false" />
+          <Property Name="QMC" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="QMCDATHORA" Type="datetime" Nullable="false" />
+          <Property Name="QMA" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="QMADATHORA" Type="datetime" Nullable="false" />
+          <Property Name="EXTRA" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTAL" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="OBS" Type="text" Nullable="false" />
+          <Property Name="DIFERENCA" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prcsub">
+          <Key>
+            <PropertyRef Name="Prcsubstamp" />
+          </Key>
+          <Property Name="codigo" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="taxa" Type="numeric" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Valor" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="Prcsubstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Prcstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="tiposub" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="tipo" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="Fixo" Type="bit" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Process">
+          <Key>
+            <PropertyRef Name="processstamp" />
+          </Key>
+          <Property Name="Data" Type="datetime" Nullable="false" />
+          <Property Name="Mes" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="Ano" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="codigo" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Processado" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="ultproc" Type="datetime" Nullable="false" />
+          <Property Name="Nrmes" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="obs" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="processstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="prodarm">
+          <Key>
+            <PropertyRef Name="prodarmstamp" />
+          </Key>
+          <Property Name="prodarmstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="ref" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="codarm" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="descarm" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="stock" Type="numeric" Precision="14" Scale="3" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="profiss">
+          <Key>
+            <PropertyRef Name="profissstamp" />
+          </Key>
+          <Property Name="profissstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="codigo" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vt">
+          <Key>
+            <PropertyRef Name="vtstamp" />
+          </Key>
+          <Property Name="vtstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Codigo" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="Matricula" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Marca" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Modelo" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Motor" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Chassis" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="anofab" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="tara" Type="numeric" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="pesobruto" Type="numeric" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Combustivel" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Pneus" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="codentida" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Nomentida" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="valInspec" Type="datetime" Nullable="false" />
+          <Property Name="daquisic" Type="datetime" Nullable="false" />
+          <Property Name="obs" Type="text" Nullable="false" />
+          <Property Name="Status" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Descstatus" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="Seguradora" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="Apolice" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="valapolice" Type="datetime" Nullable="false" />
+          <Property Name="codtrl" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="trailer" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Numlic" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="DatLic" Type="datetime" Nullable="false" />
+          <Property Name="validLic" Type="datetime" Nullable="false" />
+          <Property Name="NumInspec" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="DatInspec" Type="datetime" Nullable="false" />
+          <Property Name="DatSegura" Type="datetime" Nullable="false" />
+          <Property Name="Anomanifest" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="Datmanifest" Type="datetime" Nullable="false" />
+          <Property Name="Validmanifest" Type="datetime" Nullable="false" />
+          <Property Name="capacit" Type="numeric" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Externa" Type="bit" Nullable="false" />
+          <Property Name="numdoc" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="medveloc" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="qttporkm" Type="numeric" Precision="10" Scale="3" Nullable="false" />
+          <Property Name="capaclitros" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="ref" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="stdesc" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="codmarca" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="tipo" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="designacao" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="valorbase" Type="numeric" Precision="16" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vtcfg">
+          <Key>
+            <PropertyRef Name="vtcfgstamp" />
+          </Key>
+          <Property Name="codigo" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="Valor" Type="numeric" Precision="16" Scale="0" Nullable="false" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="feito" Type="bit" Nullable="false" />
+          <Property Name="vtcfgstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="vtstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="distamp" Type="char" MaxLength="30" />
+          <Property Name="matricula" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="valor2" Type="numeric" Precision="16" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vtconsumo">
+          <Key>
+            <PropertyRef Name="vtconsumostamp" />
+          </Key>
+          <Property Name="codigo" Type="numeric" Precision="8" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="70" Nullable="false" />
+          <Property Name="tipo" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="vtconsumostamp" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vtcorreias">
+          <Key>
+            <PropertyRef Name="vtcorreiasstamp" />
+          </Key>
+          <Property Name="descricao" Type="char" MaxLength="70" Nullable="false" />
+          <Property Name="reforig" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref1" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref2" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref3" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref4" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="codigo" Type="numeric" Precision="8" Scale="0" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="vtcorreiasstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="vtstamp" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vtfiltros">
+          <Key>
+            <PropertyRef Name="vtfiltrosstamp" />
+          </Key>
+          <Property Name="descricao" Type="char" MaxLength="70" Nullable="false" />
+          <Property Name="reforig" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref1" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref2" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref3" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref4" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="tipo" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="codigo" Type="numeric" Precision="8" Scale="0" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="vtfiltrosstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="vtstamp" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vtman">
+          <Key>
+            <PropertyRef Name="vtmanstamp" />
+          </Key>
+          <Property Name="matricula" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="valparam" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Valkm" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="diferenca" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="feito" Type="bit" Nullable="false" />
+          <Property Name="vtmanstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="vtstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="distamp" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vtmedpneus">
+          <Key>
+            <PropertyRef Name="vtmedpneusstamp" />
+          </Key>
+          <Property Name="descricao" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="codigo" Type="numeric" Precision="8" Scale="0" Nullable="false" />
+          <Property Name="vtmedpneusstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="vtstamp" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vtoleos">
+          <Key>
+            <PropertyRef Name="vtoleosstamp" />
+          </Key>
+          <Property Name="descricao" Type="char" MaxLength="70" Nullable="false" />
+          <Property Name="reforig" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref1" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref2" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref3" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref4" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="codigo" Type="numeric" Precision="8" Scale="0" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="vtoleosstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="vtstamp" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vtoutros">
+          <Key>
+            <PropertyRef Name="vtoutrosstamp" />
+          </Key>
+          <Property Name="descricao" Type="char" MaxLength="70" Nullable="false" />
+          <Property Name="reforig" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref1" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref2" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref3" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="outraref4" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="codigo" Type="numeric" Precision="8" Scale="0" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="vtoutrosstamp" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="vtstamp" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vtpneus">
+          <Key>
+            <PropertyRef Name="vtpneusstamp" />
+          </Key>
+          <Property Name="codigo" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="descricao" Type="char" MaxLength="70" Nullable="false" />
+          <Property Name="qmc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmcdathora" Type="datetime" Nullable="false" />
+          <Property Name="qma" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="qmadathora" Type="datetime" Nullable="false" />
+          <Property Name="vtpneusstamp" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <Association Name="   FK__peempcc__peempls__38B96646">
+          <End Role="peempl" Type="Self.peempl" Multiplicity="0..1" />
+          <End Role="peempcc" Type="Self.peempcc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="peempl">
+              <PropertyRef Name="peemplstamp" />
+            </Principal>
+            <Dependent Role="peempcc">
+              <PropertyRef Name="peemplstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="   FK__peempl__peempsta__1A34DF26">
+          <End Role="peemp" Type="Self.peemp" Multiplicity="1" />
+          <End Role="peempl" Type="Self.peempl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="peemp">
+              <PropertyRef Name="peempstamp" />
+            </Principal>
+            <Dependent Role="peempl">
+              <PropertyRef Name="peempstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="   FK__vtcfg__vtstamp__683E5C36">
+          <End Role="vt" Type="Self.vt" Multiplicity="1" />
+          <End Role="vtcfg" Type="Self.vtcfg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtcfg">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="   FK__vtcorreia__vtsta__7BDB408F">
+          <End Role="vt" Type="Self.vt" Multiplicity="1" />
+          <End Role="vtcorreias" Type="Self.vtcorreias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtcorreias">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="   FK__vtfiltros__vtsta__5B6E70FD">
+          <End Role="vt" Type="Self.vt" Multiplicity="1" />
+          <End Role="vtfiltros" Type="Self.vtfiltros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtfiltros">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="   FK__vtman__distamp__73B00EE2">
+          <End Role="vt" Type="Self.vt" Multiplicity="1" />
+          <End Role="vtman" Type="Self.vtman" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtman">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="   FK__vtmedpneu__vtsta__13B2CA20">
+          <End Role="vt" Type="Self.vt" Multiplicity="1" />
+          <End Role="vtmedpneus" Type="Self.vtmedpneus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtmedpneus">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="   FK__vtoleos__vtstamp__6BA4D8C6">
+          <End Role="vt" Type="Self.vt" Multiplicity="1" />
+          <End Role="vtoleos" Type="Self.vtoleos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtoleos">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="   FK__vtoutros__vtstam__0C11A858">
+          <End Role="vt" Type="Self.vt" Multiplicity="1" />
+          <End Role="vtoutros" Type="Self.vtoutros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtoutros">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AcosterrasModelStoreContainer">
+          <EntitySet Name="pedesc" EntityType="Self.pedesc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="peemp" EntityType="Self.peemp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="peempcc" EntityType="Self.peempcc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="peempl" EntityType="Self.peempl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pesub" EntityType="Self.pesub" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pjpe" EntityType="Self.pjpe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prc" EntityType="Self.Prc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prcdesc" EntityType="Self.Prcdesc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prcemp" EntityType="Self.Prcemp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRCEXTRA" EntityType="Self.PRCEXTRA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prcsub" EntityType="Self.Prcsub" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Process" EntityType="Self.Process" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="prodarm" EntityType="Self.prodarm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="profiss" EntityType="Self.profiss" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vt" EntityType="Self.vt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vtcfg" EntityType="Self.vtcfg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vtconsumo" EntityType="Self.vtconsumo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vtcorreias" EntityType="Self.vtcorreias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vtfiltros" EntityType="Self.vtfiltros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vtman" EntityType="Self.vtman" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vtmedpneus" EntityType="Self.vtmedpneus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vtoleos" EntityType="Self.vtoleos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vtoutros" EntityType="Self.vtoutros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vtpneus" EntityType="Self.vtpneus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pjst" EntityType="Self.pjst" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [pjst].[ref] AS [ref], 
+    [pjst].[descricao] AS [descricao], 
+    [pjst].[Qtt] AS [Qtt], 
+    [pjst].[Qttok] AS [Qttok], 
+    [pjst].[QttFalta] AS [QttFalta], 
+    [pjst].[Preco] AS [Preco], 
+    [pjst].[Total] AS [Total], 
+    [pjst].[pjststamp] AS [pjststamp], 
+    [pjst].[pjstamp] AS [pjstamp], 
+    [pjst].[status] AS [status]
+    FROM [dbo].[pjst] AS [pjst]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="pjvt" EntityType="Self.pjvt" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [pjvt].[matricula] AS [matricula], 
+    [pjvt].[Capacit] AS [Capacit], 
+    [pjvt].[nviagens] AS [nviagens], 
+    [pjvt].[Totqtt] AS [Totqtt], 
+    [pjvt].[nome] AS [nome], 
+    [pjvt].[no] AS [no], 
+    [pjvt].[pjvtstamp] AS [pjvtstamp], 
+    [pjvt].[pjstamp] AS [pjstamp], 
+    [pjvt].[status] AS [status], 
+    [pjvt].[marca] AS [marca], 
+    [pjvt].[tipo] AS [tipo], 
+    [pjvt].[valorbase] AS [valorbase]
+    FROM [dbo].[pjvt] AS [pjvt]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="   FK__peempcc__peempls__38B96646" Association="Self.   FK__peempcc__peempls__38B96646">
+            <End Role="peempl" EntitySet="peempl" />
+            <End Role="peempcc" EntitySet="peempcc" />
+          </AssociationSet>
+          <AssociationSet Name="   FK__peempl__peempsta__1A34DF26" Association="Self.   FK__peempl__peempsta__1A34DF26">
+            <End Role="peemp" EntitySet="peemp" />
+            <End Role="peempl" EntitySet="peempl" />
+          </AssociationSet>
+          <AssociationSet Name="   FK__vtcfg__vtstamp__683E5C36" Association="Self.   FK__vtcfg__vtstamp__683E5C36">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtcfg" EntitySet="vtcfg" />
+          </AssociationSet>
+          <AssociationSet Name="   FK__vtcorreia__vtsta__7BDB408F" Association="Self.   FK__vtcorreia__vtsta__7BDB408F">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtcorreias" EntitySet="vtcorreias" />
+          </AssociationSet>
+          <AssociationSet Name="   FK__vtfiltros__vtsta__5B6E70FD" Association="Self.   FK__vtfiltros__vtsta__5B6E70FD">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtfiltros" EntitySet="vtfiltros" />
+          </AssociationSet>
+          <AssociationSet Name="   FK__vtman__distamp__73B00EE2" Association="Self.   FK__vtman__distamp__73B00EE2">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtman" EntitySet="vtman" />
+          </AssociationSet>
+          <AssociationSet Name="   FK__vtmedpneu__vtsta__13B2CA20" Association="Self.   FK__vtmedpneu__vtsta__13B2CA20">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtmedpneus" EntitySet="vtmedpneus" />
+          </AssociationSet>
+          <AssociationSet Name="   FK__vtoleos__vtstamp__6BA4D8C6" Association="Self.   FK__vtoleos__vtstamp__6BA4D8C6">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtoleos" EntitySet="vtoleos" />
+          </AssociationSet>
+          <AssociationSet Name="   FK__vtoutros__vtstam__0C11A858" Association="Self.   FK__vtoutros__vtstam__0C11A858">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtoutros" EntitySet="vtoutros" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AcosterrasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="pedesc">
+          <Key>
+            <PropertyRef Name="pedescstamp" />
+          </Key>
+          <Property Name="pedescstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="pestamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codigo" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="tipo" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="no" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="peemp">
+          <Key>
+            <PropertyRef Name="peempstamp" />
+          </Key>
+          <Property Name="codigo" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="no" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="nome" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="mesin" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="numprest" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="devsal" Type="Boolean" Nullable="false" />
+          <Property Name="devolvido" Type="Boolean" Nullable="false" />
+          <Property Name="peempstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="pestamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="obs" Type="String" MaxLength="250" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codmes" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="saldo" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="ano" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="moeda" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Banco" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="contatesoura" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="titulo" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="numtitulo" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codtz" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <NavigationProperty Name="peempls" Relationship="Self.C___FK__peempl__peempsta__1A34DF26" FromRole="peemp" ToRole="peempl" />
+        </EntityType>
+        <EntityType Name="peempcc">
+          <Key>
+            <PropertyRef Name="peempccstamp" />
+          </Key>
+          <Property Name="codigo" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="ano" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="nummes" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="mes" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="nrdoc" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="no" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="nome" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vencim" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="debito" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="debitom" Type="Decimal" Precision="16" Scale="4" Nullable="false" />
+          <Property Name="debitof" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="debitofm" Type="Decimal" Precision="16" Scale="4" Nullable="false" />
+          <Property Name="credito" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="creditom" Type="Decimal" Precision="16" Scale="4" Nullable="false" />
+          <Property Name="creditof" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="creditofm" Type="Decimal" Precision="16" Scale="4" Nullable="false" />
+          <Property Name="peemplstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="peempccstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="prcstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="origem" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="oristamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="documento" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="moeda" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="ccusto" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="codmov" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="empdevstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="prcempstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="peempl" Relationship="Self.C___FK__peempcc__peempls__38B96646" FromRole="peempcc" ToRole="peempl" />
+        </EntityType>
+        <EntityType Name="peempl">
+          <Key>
+            <PropertyRef Name="peemplstamp" />
+          </Key>
+          <Property Name="codigo" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="mespagar" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ano" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="nummes" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="pago" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="ult_devol" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="saldo" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="devolvido" Type="Boolean" Nullable="false" />
+          <Property Name="peempstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="peemplstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="no" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="nome" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="nrdoc" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="moeda" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Banco" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="contatesoura" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="titulo" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="numtitulo" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codtz" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <NavigationProperty Name="peemp" Relationship="Self.C___FK__peempl__peempsta__1A34DF26" FromRole="peempl" ToRole="peemp" />
+          <NavigationProperty Name="peempccs" Relationship="Self.C___FK__peempcc__peempls__38B96646" FromRole="peempl" ToRole="peempcc" />
+        </EntityType>
+        <EntityType Name="pesub">
+          <Key>
+            <PropertyRef Name="pesubstamp" />
+          </Key>
+          <Property Name="pesubstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="pestamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codigo" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="tipo" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="no" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pjpe">
+          <Key>
+            <PropertyRef Name="pjpestamp" />
+          </Key>
+          <Property Name="No" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="80" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="funcao" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="pjpestamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="pjstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prc">
+          <Key>
+            <PropertyRef Name="Prcstamp" />
+          </Key>
+          <Property Name="Prcstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Processstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="nrmes" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="mes" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ano" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="no" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="nome" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codcat" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="cat" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="coddesc" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="codfun" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="codesc" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="escalao" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="indice" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codsec" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="codcl" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="classe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="quota" Type="Boolean" Nullable="false" />
+          <Property Name="sind" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="nsind" Type="Decimal" Precision="14" Scale="0" Nullable="false" />
+          <Property Name="codsit" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="situacao" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="BaseCateg" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="totsub" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="totabonus" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="totdesc" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="liquido" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="obs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechado" Type="Boolean" Nullable="false" />
+          <Property Name="qmc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="valoremp" Type="Decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="val_emp" Type="Decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="SegSocEmp" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prcdesc">
+          <Key>
+            <PropertyRef Name="Prcdescstamp" />
+          </Key>
+          <Property Name="codigo" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="taxa" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="Prcdescstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Prcstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="tipodesc" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="tipo" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="Fixo" Type="Boolean" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="taxa2" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="valor2" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prcemp">
+          <Key>
+            <PropertyRef Name="Prcempstamp" />
+          </Key>
+          <Property Name="nrmes" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="mes" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="ano" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Prcempstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="peemplstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Prcstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PRCEXTRA">
+          <Key>
+            <PropertyRef Name="PRCEXTRASTAMP" />
+          </Key>
+          <Property Name="PRCEXTRASTAMP" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="PROCESSSTAMP" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NRMES" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="MES" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ANO" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="DATA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NO" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="NOME" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CODCAT" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="CAT" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CODDESC" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="CODFUN" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="CODESC" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="ESCALAO" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="INDICE" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CODSEC" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="CODCL" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="CLASSE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="QUOTA" Type="Boolean" Nullable="false" />
+          <Property Name="SIND" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NSIND" Type="Decimal" Precision="16" Scale="0" Nullable="false" />
+          <Property Name="CODSIT" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+          <Property Name="SITUACAO" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="BASECATEG" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTSUB" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTABONUS" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTDESC" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="LIQUIDO" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="FECHADO" Type="Boolean" Nullable="false" />
+          <Property Name="QMC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="QMCDATHORA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="QMA" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="QMADATHORA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EXTRA" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTAL" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="OBS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIFERENCA" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prcsub">
+          <Key>
+            <PropertyRef Name="Prcsubstamp" />
+          </Key>
+          <Property Name="codigo" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="taxa" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="Prcsubstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Prcstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="tiposub" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="tipo" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="Fixo" Type="Boolean" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Process">
+          <Key>
+            <PropertyRef Name="processstamp" />
+          </Key>
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Mes" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ano" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codigo" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Processado" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="ultproc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Nrmes" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="obs" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="processstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="prodarm">
+          <Key>
+            <PropertyRef Name="prodarmstamp" />
+          </Key>
+          <Property Name="prodarmstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ref" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codarm" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="descarm" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="stock" Type="Decimal" Precision="14" Scale="3" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="profiss">
+          <Key>
+            <PropertyRef Name="profissstamp" />
+          </Key>
+          <Property Name="profissstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="codigo" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="pjst">
+          <Key>
+            <PropertyRef Name="ref" />
+            <PropertyRef Name="descricao" />
+            <PropertyRef Name="Qtt" />
+            <PropertyRef Name="Qttok" />
+            <PropertyRef Name="QttFalta" />
+            <PropertyRef Name="Preco" />
+            <PropertyRef Name="Total" />
+            <PropertyRef Name="pjststamp" />
+            <PropertyRef Name="pjstamp" />
+            <PropertyRef Name="status" />
+          </Key>
+          <Property Name="ref" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Qtt" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="Qttok" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="QttFalta" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="Preco" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="Total" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+          <Property Name="pjststamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="pjstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pjvt">
+          <Key>
+            <PropertyRef Name="matricula" />
+            <PropertyRef Name="Capacit" />
+            <PropertyRef Name="nviagens" />
+            <PropertyRef Name="Totqtt" />
+            <PropertyRef Name="nome" />
+            <PropertyRef Name="no" />
+            <PropertyRef Name="pjvtstamp" />
+            <PropertyRef Name="pjstamp" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="marca" />
+            <PropertyRef Name="tipo" />
+            <PropertyRef Name="valorbase" />
+          </Key>
+          <Property Name="matricula" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Capacit" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="nviagens" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="Totqtt" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="nome" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="no" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="pjvtstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="pjstamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="tipo" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="valorbase" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+        </EntityType>
+        <Association Name="C___FK__peempl__peempsta__1A34DF26">
+          <End Role="peemp" Type="Self.peemp" Multiplicity="1" />
+          <End Role="peempl" Type="Self.peempl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="peemp">
+              <PropertyRef Name="peempstamp" />
+            </Principal>
+            <Dependent Role="peempl">
+              <PropertyRef Name="peempstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C___FK__peempcc__peempls__38B96646">
+          <End Role="peempl" Type="Self.peempl" Multiplicity="0..1" />
+          <End Role="peempcc" Type="Self.peempcc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="peempl">
+              <PropertyRef Name="peemplstamp" />
+            </Principal>
+            <Dependent Role="peempcc">
+              <PropertyRef Name="peemplstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AcosterrasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="pedescs" EntityType="Self.pedesc" />
+          <EntitySet Name="peemps" EntityType="Self.peemp" />
+          <EntitySet Name="peempccs" EntityType="Self.peempcc" />
+          <EntitySet Name="peempls" EntityType="Self.peempl" />
+          <EntitySet Name="pesubs" EntityType="Self.pesub" />
+          <EntitySet Name="pjpes" EntityType="Self.pjpe" />
+          <EntitySet Name="Prcs" EntityType="Self.Prc" />
+          <EntitySet Name="Prcdescs" EntityType="Self.Prcdesc" />
+          <EntitySet Name="Prcemps" EntityType="Self.Prcemp" />
+          <EntitySet Name="PRCEXTRAs" EntityType="Self.PRCEXTRA" />
+          <EntitySet Name="Prcsubs" EntityType="Self.Prcsub" />
+          <EntitySet Name="Processes" EntityType="Self.Process" />
+          <EntitySet Name="prodarms" EntityType="Self.prodarm" />
+          <EntitySet Name="profisses" EntityType="Self.profiss" />
+          <EntitySet Name="pjsts" EntityType="Self.pjst" />
+          <EntitySet Name="pjvts" EntityType="Self.pjvt" />
+          <AssociationSet Name="C___FK__peempl__peempsta__1A34DF26" Association="Self.C___FK__peempl__peempsta__1A34DF26">
+            <End Role="peemp" EntitySet="peemps" />
+            <End Role="peempl" EntitySet="peempls" />
+          </AssociationSet>
+          <AssociationSet Name="C___FK__peempcc__peempls__38B96646" Association="Self.C___FK__peempcc__peempls__38B96646">
+            <End Role="peempl" EntitySet="peempls" />
+            <End Role="peempcc" EntitySet="peempccs" />
+          </AssociationSet>
+          <EntitySet Name="vt" EntityType="AcosterrasModel.vt" />
+          <EntitySet Name="vtcfg" EntityType="AcosterrasModel.vtcfg" />
+          <EntitySet Name="vtconsumo" EntityType="AcosterrasModel.vtconsumo" />
+          <EntitySet Name="vtcorreias" EntityType="AcosterrasModel.vtcorreias" />
+          <EntitySet Name="vtfiltros" EntityType="AcosterrasModel.vtfiltros" />
+          <EntitySet Name="vtman" EntityType="AcosterrasModel.vtman" />
+          <EntitySet Name="vtmedpneus" EntityType="AcosterrasModel.vtmedpneus" />
+          <EntitySet Name="vtoleos" EntityType="AcosterrasModel.vtoleos" />
+          <EntitySet Name="vtoutros" EntityType="AcosterrasModel.vtoutros" />
+          <EntitySet Name="vtpneus" EntityType="AcosterrasModel.vtpneus" />
+          <AssociationSet Name="C___FK__vtcfg__vtstamp__683E5C36" Association="AcosterrasModel.C___FK__vtcfg__vtstamp__683E5C36">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtcfg" EntitySet="vtcfg" />
+          </AssociationSet>
+          <AssociationSet Name="C___FK__vtcorreia__vtsta__7BDB408F" Association="AcosterrasModel.C___FK__vtcorreia__vtsta__7BDB408F">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtcorreias" EntitySet="vtcorreias" />
+          </AssociationSet>
+          <AssociationSet Name="C___FK__vtfiltros__vtsta__5B6E70FD" Association="AcosterrasModel.C___FK__vtfiltros__vtsta__5B6E70FD">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtfiltros" EntitySet="vtfiltros" />
+          </AssociationSet>
+          <AssociationSet Name="C___FK__vtman__distamp__73B00EE2" Association="AcosterrasModel.C___FK__vtman__distamp__73B00EE2">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtman" EntitySet="vtman" />
+          </AssociationSet>
+          <AssociationSet Name="C___FK__vtmedpneu__vtsta__13B2CA20" Association="AcosterrasModel.C___FK__vtmedpneu__vtsta__13B2CA20">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtmedpneus" EntitySet="vtmedpneus" />
+          </AssociationSet>
+          <AssociationSet Name="C___FK__vtoleos__vtstamp__6BA4D8C6" Association="AcosterrasModel.C___FK__vtoleos__vtstamp__6BA4D8C6">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtoleos" EntitySet="vtoleos" />
+          </AssociationSet>
+          <AssociationSet Name="C___FK__vtoutros__vtstam__0C11A858" Association="AcosterrasModel.C___FK__vtoutros__vtstam__0C11A858">
+            <End Role="vt" EntitySet="vt" />
+            <End Role="vtoutros" EntitySet="vtoutros" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="vt">
+          <Key>
+            <PropertyRef Name="vtstamp" />
+          </Key>
+          <Property Name="vtstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Codigo" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="Matricula" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Marca" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Modelo" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Motor" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Chassis" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="anofab" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="tara" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="pesobruto" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="Combustivel" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Pneus" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="codentida" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Nomentida" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="valInspec" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="daquisic" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="obs" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="Descstatus" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Seguradora" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="Apolice" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="valapolice" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="codtrl" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="trailer" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Numlic" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="DatLic" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="validLic" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NumInspec" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="DatInspec" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DatSegura" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Anomanifest" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="Datmanifest" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Validmanifest" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="capacit" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+          <Property Name="Externa" Type="Boolean" Nullable="false" />
+          <Property Name="numdoc" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="medveloc" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="qttporkm" Type="Decimal" Nullable="false" Precision="10" Scale="3" />
+          <Property Name="capaclitros" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="ref" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="stdesc" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="codmarca" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="tipo" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="designacao" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="valorbase" Type="Decimal" Nullable="false" Precision="16" Scale="2" />
+          <NavigationProperty Name="vtcfg" Relationship="AcosterrasModel.C___FK__vtcfg__vtstamp__683E5C36" FromRole="vt" ToRole="vtcfg" />
+          <NavigationProperty Name="vtcorreias" Relationship="AcosterrasModel.C___FK__vtcorreia__vtsta__7BDB408F" FromRole="vt" ToRole="vtcorreias" />
+          <NavigationProperty Name="vtfiltros" Relationship="AcosterrasModel.C___FK__vtfiltros__vtsta__5B6E70FD" FromRole="vt" ToRole="vtfiltros" />
+          <NavigationProperty Name="vtman" Relationship="AcosterrasModel.C___FK__vtman__distamp__73B00EE2" FromRole="vt" ToRole="vtman" />
+          <NavigationProperty Name="vtmedpneus" Relationship="AcosterrasModel.C___FK__vtmedpneu__vtsta__13B2CA20" FromRole="vt" ToRole="vtmedpneus" />
+          <NavigationProperty Name="vtoleos" Relationship="AcosterrasModel.C___FK__vtoleos__vtstamp__6BA4D8C6" FromRole="vt" ToRole="vtoleos" />
+          <NavigationProperty Name="vtoutros" Relationship="AcosterrasModel.C___FK__vtoutros__vtstam__0C11A858" FromRole="vt" ToRole="vtoutros" />
+        </EntityType>
+        <EntityType Name="vtcfg">
+          <Key>
+            <PropertyRef Name="vtcfgstamp" />
+          </Key>
+          <Property Name="codigo" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="Valor" Type="Decimal" Nullable="false" Precision="16" Scale="0" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="feito" Type="Boolean" Nullable="false" />
+          <Property Name="vtcfgstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="vtstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="distamp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="matricula" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="valor2" Type="Decimal" Nullable="false" Precision="16" Scale="0" />
+          <NavigationProperty Name="vt" Relationship="AcosterrasModel.C___FK__vtcfg__vtstamp__683E5C36" FromRole="vtcfg" ToRole="vt" />
+        </EntityType>
+        <EntityType Name="vtconsumo">
+          <Key>
+            <PropertyRef Name="vtconsumostamp" />
+          </Key>
+          <Property Name="codigo" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="70" FixedLength="true" Unicode="false" />
+          <Property Name="tipo" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vtconsumostamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vtcorreias">
+          <Key>
+            <PropertyRef Name="vtcorreiasstamp" />
+          </Key>
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="70" FixedLength="true" Unicode="false" />
+          <Property Name="reforig" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref1" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref2" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref3" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref4" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="codigo" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vtcorreiasstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="vtstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="vt" Relationship="AcosterrasModel.C___FK__vtcorreia__vtsta__7BDB408F" FromRole="vtcorreias" ToRole="vt" />
+        </EntityType>
+        <EntityType Name="vtfiltros">
+          <Key>
+            <PropertyRef Name="vtfiltrosstamp" />
+          </Key>
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="70" FixedLength="true" Unicode="false" />
+          <Property Name="reforig" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref1" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref2" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref3" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref4" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="tipo" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="codigo" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vtfiltrosstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="vtstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="vt" Relationship="AcosterrasModel.C___FK__vtfiltros__vtsta__5B6E70FD" FromRole="vtfiltros" ToRole="vt" />
+        </EntityType>
+        <EntityType Name="vtman">
+          <Key>
+            <PropertyRef Name="vtmanstamp" />
+          </Key>
+          <Property Name="matricula" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="valparam" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Valkm" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="diferenca" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="feito" Type="Boolean" Nullable="false" />
+          <Property Name="vtmanstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="vtstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="distamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="vt" Relationship="AcosterrasModel.C___FK__vtman__distamp__73B00EE2" FromRole="vtman" ToRole="vt" />
+        </EntityType>
+        <EntityType Name="vtmedpneus">
+          <Key>
+            <PropertyRef Name="vtmedpneusstamp" />
+          </Key>
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="codigo" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+          <Property Name="vtmedpneusstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="vtstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="vt" Relationship="AcosterrasModel.C___FK__vtmedpneu__vtsta__13B2CA20" FromRole="vtmedpneus" ToRole="vt" />
+        </EntityType>
+        <EntityType Name="vtoleos">
+          <Key>
+            <PropertyRef Name="vtoleosstamp" />
+          </Key>
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="70" FixedLength="true" Unicode="false" />
+          <Property Name="reforig" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref1" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref2" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref3" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref4" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="codigo" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vtoleosstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="vtstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="vt" Relationship="AcosterrasModel.C___FK__vtoleos__vtstamp__6BA4D8C6" FromRole="vtoleos" ToRole="vt" />
+        </EntityType>
+        <EntityType Name="vtoutros">
+          <Key>
+            <PropertyRef Name="vtoutrosstamp" />
+          </Key>
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="70" FixedLength="true" Unicode="false" />
+          <Property Name="reforig" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref1" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref2" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref3" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="outraref4" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="codigo" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vtoutrosstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="vtstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="vt" Relationship="AcosterrasModel.C___FK__vtoutros__vtstam__0C11A858" FromRole="vtoutros" ToRole="vt" />
+        </EntityType>
+        <EntityType Name="vtpneus">
+          <Key>
+            <PropertyRef Name="vtpneusstamp" />
+          </Key>
+          <Property Name="codigo" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="70" FixedLength="true" Unicode="false" />
+          <Property Name="qmc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmcdathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="qma" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="qmadathora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vtpneusstamp" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <Association Name="C___FK__vtcfg__vtstamp__683E5C36">
+          <End Type="AcosterrasModel.vt" Role="vt" Multiplicity="1" />
+          <End Type="AcosterrasModel.vtcfg" Role="vtcfg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtcfg">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C___FK__vtcorreia__vtsta__7BDB408F">
+          <End Type="AcosterrasModel.vt" Role="vt" Multiplicity="1" />
+          <End Type="AcosterrasModel.vtcorreias" Role="vtcorreias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtcorreias">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C___FK__vtfiltros__vtsta__5B6E70FD">
+          <End Type="AcosterrasModel.vt" Role="vt" Multiplicity="1" />
+          <End Type="AcosterrasModel.vtfiltros" Role="vtfiltros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtfiltros">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C___FK__vtman__distamp__73B00EE2">
+          <End Type="AcosterrasModel.vt" Role="vt" Multiplicity="1" />
+          <End Type="AcosterrasModel.vtman" Role="vtman" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtman">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C___FK__vtmedpneu__vtsta__13B2CA20">
+          <End Type="AcosterrasModel.vt" Role="vt" Multiplicity="1" />
+          <End Type="AcosterrasModel.vtmedpneus" Role="vtmedpneus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtmedpneus">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C___FK__vtoleos__vtstamp__6BA4D8C6">
+          <End Type="AcosterrasModel.vt" Role="vt" Multiplicity="1" />
+          <End Type="AcosterrasModel.vtoleos" Role="vtoleos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtoleos">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C___FK__vtoutros__vtstam__0C11A858">
+          <End Type="AcosterrasModel.vt" Role="vt" Multiplicity="1" />
+          <End Type="AcosterrasModel.vtoutros" Role="vtoutros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vt">
+              <PropertyRef Name="vtstamp" />
+            </Principal>
+            <Dependent Role="vtoutros">
+              <PropertyRef Name="vtstamp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AcosterrasModelStoreContainer" CdmEntityContainer="AcosterrasEntities">
+          <EntitySetMapping Name="pedescs">
+            <EntityTypeMapping TypeName="AcosterrasModel.pedesc">
+              <MappingFragment StoreEntitySet="pedesc">
+                <ScalarProperty Name="pedescstamp" ColumnName="pedescstamp" />
+                <ScalarProperty Name="pestamp" ColumnName="pestamp" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="peemps">
+            <EntityTypeMapping TypeName="AcosterrasModel.peemp">
+              <MappingFragment StoreEntitySet="peemp">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="mesin" ColumnName="mesin" />
+                <ScalarProperty Name="numprest" ColumnName="numprest" />
+                <ScalarProperty Name="devsal" ColumnName="devsal" />
+                <ScalarProperty Name="devolvido" ColumnName="devolvido" />
+                <ScalarProperty Name="peempstamp" ColumnName="peempstamp" />
+                <ScalarProperty Name="pestamp" ColumnName="pestamp" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="obs" ColumnName="obs" />
+                <ScalarProperty Name="codmes" ColumnName="codmes" />
+                <ScalarProperty Name="saldo" ColumnName="saldo" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="moeda" ColumnName="moeda" />
+                <ScalarProperty Name="Banco" ColumnName="Banco" />
+                <ScalarProperty Name="contatesoura" ColumnName="contatesoura" />
+                <ScalarProperty Name="titulo" ColumnName="titulo" />
+                <ScalarProperty Name="numtitulo" ColumnName="numtitulo" />
+                <ScalarProperty Name="codtz" ColumnName="codtz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="peempccs">
+            <EntityTypeMapping TypeName="AcosterrasModel.peempcc">
+              <MappingFragment StoreEntitySet="peempcc">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="nummes" ColumnName="nummes" />
+                <ScalarProperty Name="mes" ColumnName="mes" />
+                <ScalarProperty Name="nrdoc" ColumnName="nrdoc" />
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="vencim" ColumnName="vencim" />
+                <ScalarProperty Name="debito" ColumnName="debito" />
+                <ScalarProperty Name="debitom" ColumnName="debitom" />
+                <ScalarProperty Name="debitof" ColumnName="debitof" />
+                <ScalarProperty Name="debitofm" ColumnName="debitofm" />
+                <ScalarProperty Name="credito" ColumnName="credito" />
+                <ScalarProperty Name="creditom" ColumnName="creditom" />
+                <ScalarProperty Name="creditof" ColumnName="creditof" />
+                <ScalarProperty Name="creditofm" ColumnName="creditofm" />
+                <ScalarProperty Name="peemplstamp" ColumnName="peemplstamp" />
+                <ScalarProperty Name="peempccstamp" ColumnName="peempccstamp" />
+                <ScalarProperty Name="prcstamp" ColumnName="prcstamp" />
+                <ScalarProperty Name="origem" ColumnName="origem" />
+                <ScalarProperty Name="oristamp" ColumnName="oristamp" />
+                <ScalarProperty Name="documento" ColumnName="documento" />
+                <ScalarProperty Name="moeda" ColumnName="moeda" />
+                <ScalarProperty Name="ccusto" ColumnName="ccusto" />
+                <ScalarProperty Name="codmov" ColumnName="codmov" />
+                <ScalarProperty Name="empdevstamp" ColumnName="empdevstamp" />
+                <ScalarProperty Name="prcempstamp" ColumnName="prcempstamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="peempls">
+            <EntityTypeMapping TypeName="AcosterrasModel.peempl">
+              <MappingFragment StoreEntitySet="peempl">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="mespagar" ColumnName="mespagar" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="nummes" ColumnName="nummes" />
+                <ScalarProperty Name="pago" ColumnName="pago" />
+                <ScalarProperty Name="ult_devol" ColumnName="ult_devol" />
+                <ScalarProperty Name="saldo" ColumnName="saldo" />
+                <ScalarProperty Name="devolvido" ColumnName="devolvido" />
+                <ScalarProperty Name="peempstamp" ColumnName="peempstamp" />
+                <ScalarProperty Name="peemplstamp" ColumnName="peemplstamp" />
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="nrdoc" ColumnName="nrdoc" />
+                <ScalarProperty Name="moeda" ColumnName="moeda" />
+                <ScalarProperty Name="Banco" ColumnName="Banco" />
+                <ScalarProperty Name="contatesoura" ColumnName="contatesoura" />
+                <ScalarProperty Name="titulo" ColumnName="titulo" />
+                <ScalarProperty Name="numtitulo" ColumnName="numtitulo" />
+                <ScalarProperty Name="codtz" ColumnName="codtz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pesubs">
+            <EntityTypeMapping TypeName="AcosterrasModel.pesub">
+              <MappingFragment StoreEntitySet="pesub">
+                <ScalarProperty Name="pesubstamp" ColumnName="pesubstamp" />
+                <ScalarProperty Name="pestamp" ColumnName="pestamp" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pjpes">
+            <EntityTypeMapping TypeName="AcosterrasModel.pjpe">
+              <MappingFragment StoreEntitySet="pjpe">
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="funcao" ColumnName="funcao" />
+                <ScalarProperty Name="pjpestamp" ColumnName="pjpestamp" />
+                <ScalarProperty Name="pjstamp" ColumnName="pjstamp" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prcs">
+            <EntityTypeMapping TypeName="AcosterrasModel.Prc">
+              <MappingFragment StoreEntitySet="Prc">
+                <ScalarProperty Name="Prcstamp" ColumnName="Prcstamp" />
+                <ScalarProperty Name="Processstamp" ColumnName="Processstamp" />
+                <ScalarProperty Name="nrmes" ColumnName="nrmes" />
+                <ScalarProperty Name="mes" ColumnName="mes" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="codcat" ColumnName="codcat" />
+                <ScalarProperty Name="cat" ColumnName="cat" />
+                <ScalarProperty Name="coddesc" ColumnName="coddesc" />
+                <ScalarProperty Name="codfun" ColumnName="codfun" />
+                <ScalarProperty Name="codesc" ColumnName="codesc" />
+                <ScalarProperty Name="escalao" ColumnName="escalao" />
+                <ScalarProperty Name="indice" ColumnName="indice" />
+                <ScalarProperty Name="codsec" ColumnName="codsec" />
+                <ScalarProperty Name="codcl" ColumnName="codcl" />
+                <ScalarProperty Name="classe" ColumnName="classe" />
+                <ScalarProperty Name="quota" ColumnName="quota" />
+                <ScalarProperty Name="sind" ColumnName="sind" />
+                <ScalarProperty Name="nsind" ColumnName="nsind" />
+                <ScalarProperty Name="codsit" ColumnName="codsit" />
+                <ScalarProperty Name="situacao" ColumnName="situacao" />
+                <ScalarProperty Name="BaseCateg" ColumnName="BaseCateg" />
+                <ScalarProperty Name="totsub" ColumnName="totsub" />
+                <ScalarProperty Name="totabonus" ColumnName="totabonus" />
+                <ScalarProperty Name="totdesc" ColumnName="totdesc" />
+                <ScalarProperty Name="liquido" ColumnName="liquido" />
+                <ScalarProperty Name="obs" ColumnName="obs" />
+                <ScalarProperty Name="fechado" ColumnName="fechado" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="valoremp" ColumnName="valoremp" />
+                <ScalarProperty Name="val_emp" ColumnName="val_emp" />
+                <ScalarProperty Name="SegSocEmp" ColumnName="SegSocEmp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prcdescs">
+            <EntityTypeMapping TypeName="AcosterrasModel.Prcdesc">
+              <MappingFragment StoreEntitySet="Prcdesc">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="taxa" ColumnName="taxa" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Prcdescstamp" ColumnName="Prcdescstamp" />
+                <ScalarProperty Name="Prcstamp" ColumnName="Prcstamp" />
+                <ScalarProperty Name="tipodesc" ColumnName="tipodesc" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="Fixo" ColumnName="Fixo" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="taxa2" ColumnName="taxa2" />
+                <ScalarProperty Name="valor2" ColumnName="valor2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prcemps">
+            <EntityTypeMapping TypeName="AcosterrasModel.Prcemp">
+              <MappingFragment StoreEntitySet="Prcemp">
+                <ScalarProperty Name="nrmes" ColumnName="nrmes" />
+                <ScalarProperty Name="mes" ColumnName="mes" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="Prcempstamp" ColumnName="Prcempstamp" />
+                <ScalarProperty Name="peemplstamp" ColumnName="peemplstamp" />
+                <ScalarProperty Name="Prcstamp" ColumnName="Prcstamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRCEXTRAs">
+            <EntityTypeMapping TypeName="AcosterrasModel.PRCEXTRA">
+              <MappingFragment StoreEntitySet="PRCEXTRA">
+                <ScalarProperty Name="PRCEXTRASTAMP" ColumnName="PRCEXTRASTAMP" />
+                <ScalarProperty Name="PROCESSSTAMP" ColumnName="PROCESSSTAMP" />
+                <ScalarProperty Name="NRMES" ColumnName="NRMES" />
+                <ScalarProperty Name="MES" ColumnName="MES" />
+                <ScalarProperty Name="ANO" ColumnName="ANO" />
+                <ScalarProperty Name="DATA" ColumnName="DATA" />
+                <ScalarProperty Name="NO" ColumnName="NO" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="CODCAT" ColumnName="CODCAT" />
+                <ScalarProperty Name="CAT" ColumnName="CAT" />
+                <ScalarProperty Name="CODDESC" ColumnName="CODDESC" />
+                <ScalarProperty Name="CODFUN" ColumnName="CODFUN" />
+                <ScalarProperty Name="CODESC" ColumnName="CODESC" />
+                <ScalarProperty Name="ESCALAO" ColumnName="ESCALAO" />
+                <ScalarProperty Name="INDICE" ColumnName="INDICE" />
+                <ScalarProperty Name="CODSEC" ColumnName="CODSEC" />
+                <ScalarProperty Name="CODCL" ColumnName="CODCL" />
+                <ScalarProperty Name="CLASSE" ColumnName="CLASSE" />
+                <ScalarProperty Name="QUOTA" ColumnName="QUOTA" />
+                <ScalarProperty Name="SIND" ColumnName="SIND" />
+                <ScalarProperty Name="NSIND" ColumnName="NSIND" />
+                <ScalarProperty Name="CODSIT" ColumnName="CODSIT" />
+                <ScalarProperty Name="SITUACAO" ColumnName="SITUACAO" />
+                <ScalarProperty Name="BASECATEG" ColumnName="BASECATEG" />
+                <ScalarProperty Name="TOTSUB" ColumnName="TOTSUB" />
+                <ScalarProperty Name="TOTABONUS" ColumnName="TOTABONUS" />
+                <ScalarProperty Name="TOTDESC" ColumnName="TOTDESC" />
+                <ScalarProperty Name="LIQUIDO" ColumnName="LIQUIDO" />
+                <ScalarProperty Name="FECHADO" ColumnName="FECHADO" />
+                <ScalarProperty Name="QMC" ColumnName="QMC" />
+                <ScalarProperty Name="QMCDATHORA" ColumnName="QMCDATHORA" />
+                <ScalarProperty Name="QMA" ColumnName="QMA" />
+                <ScalarProperty Name="QMADATHORA" ColumnName="QMADATHORA" />
+                <ScalarProperty Name="EXTRA" ColumnName="EXTRA" />
+                <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+                <ScalarProperty Name="OBS" ColumnName="OBS" />
+                <ScalarProperty Name="DIFERENCA" ColumnName="DIFERENCA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prcsubs">
+            <EntityTypeMapping TypeName="AcosterrasModel.Prcsub">
+              <MappingFragment StoreEntitySet="Prcsub">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="taxa" ColumnName="taxa" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Prcsubstamp" ColumnName="Prcsubstamp" />
+                <ScalarProperty Name="Prcstamp" ColumnName="Prcstamp" />
+                <ScalarProperty Name="tiposub" ColumnName="tiposub" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="Fixo" ColumnName="Fixo" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Processes">
+            <EntityTypeMapping TypeName="AcosterrasModel.Process">
+              <MappingFragment StoreEntitySet="Process">
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Mes" ColumnName="Mes" />
+                <ScalarProperty Name="Ano" ColumnName="Ano" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="Processado" ColumnName="Processado" />
+                <ScalarProperty Name="ultproc" ColumnName="ultproc" />
+                <ScalarProperty Name="Nrmes" ColumnName="Nrmes" />
+                <ScalarProperty Name="obs" ColumnName="obs" />
+                <ScalarProperty Name="processstamp" ColumnName="processstamp" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="prodarms">
+            <EntityTypeMapping TypeName="AcosterrasModel.prodarm">
+              <MappingFragment StoreEntitySet="prodarm">
+                <ScalarProperty Name="prodarmstamp" ColumnName="prodarmstamp" />
+                <ScalarProperty Name="ref" ColumnName="ref" />
+                <ScalarProperty Name="codarm" ColumnName="codarm" />
+                <ScalarProperty Name="descarm" ColumnName="descarm" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profisses">
+            <EntityTypeMapping TypeName="AcosterrasModel.profiss">
+              <MappingFragment StoreEntitySet="profiss">
+                <ScalarProperty Name="profissstamp" ColumnName="profissstamp" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pjsts">
+            <EntityTypeMapping TypeName="AcosterrasModel.pjst">
+              <MappingFragment StoreEntitySet="pjst">
+                <ScalarProperty Name="ref" ColumnName="ref" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="Qtt" ColumnName="Qtt" />
+                <ScalarProperty Name="Qttok" ColumnName="Qttok" />
+                <ScalarProperty Name="QttFalta" ColumnName="QttFalta" />
+                <ScalarProperty Name="Preco" ColumnName="Preco" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="pjststamp" ColumnName="pjststamp" />
+                <ScalarProperty Name="pjstamp" ColumnName="pjstamp" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pjvts">
+            <EntityTypeMapping TypeName="AcosterrasModel.pjvt">
+              <MappingFragment StoreEntitySet="pjvt">
+                <ScalarProperty Name="matricula" ColumnName="matricula" />
+                <ScalarProperty Name="Capacit" ColumnName="Capacit" />
+                <ScalarProperty Name="nviagens" ColumnName="nviagens" />
+                <ScalarProperty Name="Totqtt" ColumnName="Totqtt" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="pjvtstamp" ColumnName="pjvtstamp" />
+                <ScalarProperty Name="pjstamp" ColumnName="pjstamp" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="valorbase" ColumnName="valorbase" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vt">
+            <EntityTypeMapping TypeName="AcosterrasModel.vt">
+              <MappingFragment StoreEntitySet="vt">
+                <ScalarProperty Name="valorbase" ColumnName="valorbase" />
+                <ScalarProperty Name="designacao" ColumnName="designacao" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="codmarca" ColumnName="codmarca" />
+                <ScalarProperty Name="stdesc" ColumnName="stdesc" />
+                <ScalarProperty Name="ref" ColumnName="ref" />
+                <ScalarProperty Name="capaclitros" ColumnName="capaclitros" />
+                <ScalarProperty Name="qttporkm" ColumnName="qttporkm" />
+                <ScalarProperty Name="medveloc" ColumnName="medveloc" />
+                <ScalarProperty Name="numdoc" ColumnName="numdoc" />
+                <ScalarProperty Name="Externa" ColumnName="Externa" />
+                <ScalarProperty Name="capacit" ColumnName="capacit" />
+                <ScalarProperty Name="Validmanifest" ColumnName="Validmanifest" />
+                <ScalarProperty Name="Datmanifest" ColumnName="Datmanifest" />
+                <ScalarProperty Name="Anomanifest" ColumnName="Anomanifest" />
+                <ScalarProperty Name="DatSegura" ColumnName="DatSegura" />
+                <ScalarProperty Name="DatInspec" ColumnName="DatInspec" />
+                <ScalarProperty Name="NumInspec" ColumnName="NumInspec" />
+                <ScalarProperty Name="validLic" ColumnName="validLic" />
+                <ScalarProperty Name="DatLic" ColumnName="DatLic" />
+                <ScalarProperty Name="Numlic" ColumnName="Numlic" />
+                <ScalarProperty Name="trailer" ColumnName="trailer" />
+                <ScalarProperty Name="codtrl" ColumnName="codtrl" />
+                <ScalarProperty Name="valapolice" ColumnName="valapolice" />
+                <ScalarProperty Name="Apolice" ColumnName="Apolice" />
+                <ScalarProperty Name="Seguradora" ColumnName="Seguradora" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="Descstatus" ColumnName="Descstatus" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="obs" ColumnName="obs" />
+                <ScalarProperty Name="daquisic" ColumnName="daquisic" />
+                <ScalarProperty Name="valInspec" ColumnName="valInspec" />
+                <ScalarProperty Name="Nomentida" ColumnName="Nomentida" />
+                <ScalarProperty Name="codentida" ColumnName="codentida" />
+                <ScalarProperty Name="Pneus" ColumnName="Pneus" />
+                <ScalarProperty Name="Combustivel" ColumnName="Combustivel" />
+                <ScalarProperty Name="pesobruto" ColumnName="pesobruto" />
+                <ScalarProperty Name="tara" ColumnName="tara" />
+                <ScalarProperty Name="anofab" ColumnName="anofab" />
+                <ScalarProperty Name="Chassis" ColumnName="Chassis" />
+                <ScalarProperty Name="Motor" ColumnName="Motor" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="vtstamp" ColumnName="vtstamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vtcfg">
+            <EntityTypeMapping TypeName="AcosterrasModel.vtcfg">
+              <MappingFragment StoreEntitySet="vtcfg">
+                <ScalarProperty Name="valor2" ColumnName="valor2" />
+                <ScalarProperty Name="matricula" ColumnName="matricula" />
+                <ScalarProperty Name="distamp" ColumnName="distamp" />
+                <ScalarProperty Name="vtstamp" ColumnName="vtstamp" />
+                <ScalarProperty Name="vtcfgstamp" ColumnName="vtcfgstamp" />
+                <ScalarProperty Name="feito" ColumnName="feito" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vtconsumo">
+            <EntityTypeMapping TypeName="AcosterrasModel.vtconsumo">
+              <MappingFragment StoreEntitySet="vtconsumo">
+                <ScalarProperty Name="vtconsumostamp" ColumnName="vtconsumostamp" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vtcorreias">
+            <EntityTypeMapping TypeName="AcosterrasModel.vtcorreias">
+              <MappingFragment StoreEntitySet="vtcorreias">
+                <ScalarProperty Name="vtstamp" ColumnName="vtstamp" />
+                <ScalarProperty Name="vtcorreiasstamp" ColumnName="vtcorreiasstamp" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="outraref4" ColumnName="outraref4" />
+                <ScalarProperty Name="outraref3" ColumnName="outraref3" />
+                <ScalarProperty Name="outraref2" ColumnName="outraref2" />
+                <ScalarProperty Name="outraref1" ColumnName="outraref1" />
+                <ScalarProperty Name="reforig" ColumnName="reforig" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vtfiltros">
+            <EntityTypeMapping TypeName="AcosterrasModel.vtfiltros">
+              <MappingFragment StoreEntitySet="vtfiltros">
+                <ScalarProperty Name="vtstamp" ColumnName="vtstamp" />
+                <ScalarProperty Name="vtfiltrosstamp" ColumnName="vtfiltrosstamp" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="outraref4" ColumnName="outraref4" />
+                <ScalarProperty Name="outraref3" ColumnName="outraref3" />
+                <ScalarProperty Name="outraref2" ColumnName="outraref2" />
+                <ScalarProperty Name="outraref1" ColumnName="outraref1" />
+                <ScalarProperty Name="reforig" ColumnName="reforig" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vtman">
+            <EntityTypeMapping TypeName="AcosterrasModel.vtman">
+              <MappingFragment StoreEntitySet="vtman">
+                <ScalarProperty Name="distamp" ColumnName="distamp" />
+                <ScalarProperty Name="vtstamp" ColumnName="vtstamp" />
+                <ScalarProperty Name="vtmanstamp" ColumnName="vtmanstamp" />
+                <ScalarProperty Name="feito" ColumnName="feito" />
+                <ScalarProperty Name="diferenca" ColumnName="diferenca" />
+                <ScalarProperty Name="Valkm" ColumnName="Valkm" />
+                <ScalarProperty Name="valparam" ColumnName="valparam" />
+                <ScalarProperty Name="matricula" ColumnName="matricula" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vtmedpneus">
+            <EntityTypeMapping TypeName="AcosterrasModel.vtmedpneus">
+              <MappingFragment StoreEntitySet="vtmedpneus">
+                <ScalarProperty Name="vtstamp" ColumnName="vtstamp" />
+                <ScalarProperty Name="vtmedpneusstamp" ColumnName="vtmedpneusstamp" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vtoleos">
+            <EntityTypeMapping TypeName="AcosterrasModel.vtoleos">
+              <MappingFragment StoreEntitySet="vtoleos">
+                <ScalarProperty Name="vtstamp" ColumnName="vtstamp" />
+                <ScalarProperty Name="vtoleosstamp" ColumnName="vtoleosstamp" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="outraref4" ColumnName="outraref4" />
+                <ScalarProperty Name="outraref3" ColumnName="outraref3" />
+                <ScalarProperty Name="outraref2" ColumnName="outraref2" />
+                <ScalarProperty Name="outraref1" ColumnName="outraref1" />
+                <ScalarProperty Name="reforig" ColumnName="reforig" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vtoutros">
+            <EntityTypeMapping TypeName="AcosterrasModel.vtoutros">
+              <MappingFragment StoreEntitySet="vtoutros">
+                <ScalarProperty Name="vtstamp" ColumnName="vtstamp" />
+                <ScalarProperty Name="vtoutrosstamp" ColumnName="vtoutrosstamp" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="outraref4" ColumnName="outraref4" />
+                <ScalarProperty Name="outraref3" ColumnName="outraref3" />
+                <ScalarProperty Name="outraref2" ColumnName="outraref2" />
+                <ScalarProperty Name="outraref1" ColumnName="outraref1" />
+                <ScalarProperty Name="reforig" ColumnName="reforig" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vtpneus">
+            <EntityTypeMapping TypeName="AcosterrasModel.vtpneus">
+              <MappingFragment StoreEntitySet="vtpneus">
+                <ScalarProperty Name="vtpneusstamp" ColumnName="vtpneusstamp" />
+                <ScalarProperty Name="qmadathora" ColumnName="qmadathora" />
+                <ScalarProperty Name="qma" ColumnName="qma" />
+                <ScalarProperty Name="qmcdathora" ColumnName="qmcdathora" />
+                <ScalarProperty Name="qmc" ColumnName="qmc" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

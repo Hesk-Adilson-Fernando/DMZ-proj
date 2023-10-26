@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0f31ae026b4c47ddabed94cc57f781ed" Name="Diagram1" ZoomLevel="87">
+        <EntityTypeShape EntityType="AcosterrasModel.pedesc" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.peemp" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.peempcc" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.peempl" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.pesub" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.pjpe" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.Prc" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.Prcdesc" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.Prcemp" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.PRCEXTRA" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.Prcsub" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.Process" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.prodarm" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.profiss" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.pjst" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcosterrasModel.pjvt" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="AcosterrasModel.C___FK__peempl__peempsta__1A34DF26" ManuallyRouted="false" />
+        <AssociationConnector Association="AcosterrasModel.C___FK__peempcc__peempls__38B96646" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AcosterrasModel.vt" Width="1.5" PointX="11.375" PointY="23" />
+        <EntityTypeShape EntityType="AcosterrasModel.vtcfg" Width="1.5" PointX="13.625" PointY="22.375" />
+        <EntityTypeShape EntityType="AcosterrasModel.vtconsumo" Width="1.5" PointX="5.375" PointY="13.75" />
+        <EntityTypeShape EntityType="AcosterrasModel.vtcorreias" Width="1.5" PointX="13.625" PointY="38.875" />
+        <EntityTypeShape EntityType="AcosterrasModel.vtfiltros" Width="1.5" PointX="13.625" PointY="26.25" />
+        <EntityTypeShape EntityType="AcosterrasModel.vtman" Width="1.5" PointX="13.625" PointY="30.875" />
+        <EntityTypeShape EntityType="AcosterrasModel.vtmedpneus" Width="1.5" PointX="13.625" PointY="15.25" />
+        <EntityTypeShape EntityType="AcosterrasModel.vtoleos" Width="1.5" PointX="13.625" PointY="17.875" />
+        <EntityTypeShape EntityType="AcosterrasModel.vtoutros" Width="1.5" PointX="13.625" PointY="34.375" />
+        <EntityTypeShape EntityType="AcosterrasModel.vtpneus" Width="1.5" PointX="14.375" PointY="0.75" />
+        <AssociationConnector Association="AcosterrasModel.C___FK__vtcfg__vtstamp__683E5C36" />
+        <AssociationConnector Association="AcosterrasModel.C___FK__vtcorreia__vtsta__7BDB408F" />
+        <AssociationConnector Association="AcosterrasModel.C___FK__vtfiltros__vtsta__5B6E70FD" />
+        <AssociationConnector Association="AcosterrasModel.C___FK__vtman__distamp__73B00EE2" />
+        <AssociationConnector Association="AcosterrasModel.C___FK__vtmedpneu__vtsta__13B2CA20" />
+        <AssociationConnector Association="AcosterrasModel.C___FK__vtoleos__vtstamp__6BA4D8C6" />
+        <AssociationConnector Association="AcosterrasModel.C___FK__vtoutros__vtstam__0C11A858" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
